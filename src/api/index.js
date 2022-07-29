@@ -1,0 +1,1 @@
+const Base_URL = "https://fitnesstrac-kr.herokuapp.com/api/activities"
