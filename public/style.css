@@ -1,0 +1,19 @@
+/* This is our Header.css */
+
+#HomeHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  
+    font-size: 16px;
+    background-color: #4059ad;
+    padding: 1em;
+    text-decoration: none;
+  }
+  h1 {
+    font-size: 1.2em;
+    color: #4059ad;
+    text-shadow: 1px 1px 3px darkgray;
+    text-align: center;
+  }

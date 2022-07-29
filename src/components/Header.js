@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = ({loggedIn}) => {
     return (
-        <header>
+        <header id="HomeHeader">
             <h1>
             Fitness Tracker
             </h1>
