@@ -1,16 +1,28 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom"
+import React, {useState} from "react";
+import { Route, Routes, Link } from "react-router-dom"
 import {
     Header,
     Footer,
-    Body
+    Body,
+    Register,
+    Login
+
 } from "./"
 
 const App = () => {
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
+
     return (
         <div> 
-            <Header/>
+            <Header isLoggedIn={isLoggedIn} />
+      { isLoggedIn? <Userbar setIsLoggedIn={setIsLoggedIn} /> : null }
+            <Routes>
+            <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />}/>
+                <Route path="/register" element={<Register />}/>
+            </Routes>
             <Body/>
+           
+            
             <Footer/>
         </div>
     )

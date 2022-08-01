@@ -1,7 +1,7 @@
-const Base_URL = "https://fitnesstrac-kr.herokuapp.com/api"
+const BASE_URL = "https://fitnesstrac-kr.herokuapp.com/api"
 
 
-export async function registerPerson(registerUsername, registerPassword){
+export async function registerUser(registerUsername, registerPassword){
     try{ 
       console.log(registerUsername, registerPassword)
       const response = await 
@@ -20,7 +20,7 @@ export async function registerPerson(registerUsername, registerPassword){
           }
           )
           const result = await response.json();
-          return result.user.token
+          return console.log(result.user.token)
       } catch (error){
         throw error
       }
@@ -47,7 +47,7 @@ export async function registerPerson(registerUsername, registerPassword){
           )
           const result = await response.json();
   
-          return result.data.token
+          return result.user.token
       } catch (error){
         throw error
       }
