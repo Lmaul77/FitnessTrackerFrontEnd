@@ -2,7 +2,7 @@ import React from "react";
 
 const Body = () => {
     return (
-        <body>
+        <div>
             <div>
                 <form>
                     <div>
@@ -27,7 +27,7 @@ const Body = () => {
                     </button>
                 </form>
             </div>
-        </body>
+        </div>
     )
 }
 

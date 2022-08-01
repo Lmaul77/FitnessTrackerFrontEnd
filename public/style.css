@@ -1,6 +1,6 @@
 /* This is our Header.css */
 
-#HomeHeader {
+  #HomeHeader{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
