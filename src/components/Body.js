@@ -17,13 +17,13 @@ const Body = ({
   setRoutineGoal,
 }) => {
   return (
-    <div>
+    <div className="fullBody">
       <div>
         <form>
           <button>Create</button>
           <button>Delete</button>
         </form>
-        <div className="bodyActivites">
+        <div className="bodyActivities">
           <div>
             <Activities activities={activities} setActivities={setActivities} />
             <Updateactivities />
@@ -39,7 +39,7 @@ const Body = ({
             />
           </button>
         </div>
-        <div>
+        <div className="bodyRoutines">
           <Routines routines={routines} setRoutines={setRoutines} />
           <Updateroutines />
           <button>

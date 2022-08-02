@@ -67,7 +67,7 @@ export async function createActivities(token, activityName, activityDescription)
   return result;
 }
 
-export async function createRoutine(token, routineName, routineGoal, routineIsPublic) {
+export async function createRoutine(token, routineName, routineGoal) {
   const response = await fetch(`${BASE_URL}/routines`, {
     method: "POST",
     headers: {
@@ -77,7 +77,7 @@ export async function createRoutine(token, routineName, routineGoal, routineIsPu
     body: JSON.stringify({
       name: routineName,
       goal: routineGoal,
-      IsPublic: routineIsPublic
+      isPublic: true
     }),
   });
   const result = await response.json();

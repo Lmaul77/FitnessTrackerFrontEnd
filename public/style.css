@@ -17,3 +17,125 @@
     text-shadow: 1px 1px 3px darkgray;
     text-align: center;
   }
+
+  /* This is our Body.css */
+
+  /* This is css for the activities body */
+
+  .fullBody {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .bodyActivities {
+    box-sizing: border-box;
+    background-color: #4059ad;
+    box-shadow: 0 2px 4px 0 #6b9ac4;
+    height: 400px;
+    width: 600px;
+    overflow: scroll;
+  }
+
+  .bodyActivities::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  .bodyActivities::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 10px;
+  }
+
+  .bodyActivities::-webkit-scrollbar-track {
+    background-color: white
+  }
+
+  .allActivities {
+    border: 1px solid black;
+    background-color: white;
+  }
+
+  .activitiesHeader {
+    background-color: #6b9ac4;
+    text-align: center;
+    font-size: 60px;
+    
+  }
+
+  .nameAllActivities {
+    text-align: center;
+    font-size: 30px;
+    color: blue;
+  }
+
+  .descriptionAllActivities {
+    font-size: 20px;
+    color: blue;
+  }
+
+  .updateAllActivities {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* This is css for the Routines body */
+
+  .bodyRoutines {
+    box-sizing: border-box;
+    background-color: #4059ad;
+    box-shadow: 0 2px 4px 0 #6b9ac4;
+    height: 400px;
+    width: 600px;
+    overflow: scroll;
+  }
+
+  .bodyRoutines::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  .bodyRoutines::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 10px;
+  }
+
+  .bodyRoutines::-webkit-scrollbar-track {
+    background-color: white
+  }
+
+  .routinesHeader {
+    background-color: #6b9ac4;
+    text-align: center;
+    font-size: 60px;
+  }
+
+  .allRoutines {
+    border: 1px solid black;
+    background-color: white;
+  }
+
+  .creatorRoutines {
+    font-size: 30px;
+    color: black
+  }
+
+  .nameAllRoutines {
+    text-align: center;
+    font-size: 20px;
+    color: blue;
+  }
+
+  .routineGoal {
+    text-align: center;
+    font-size: 15px;
+    color: black;
+  }
+
+  .routineIsPublic {
+    text-align: center;
+    font-size: 30px;
+    color: blue;
+  }
+
+  .updateAllRoutines {
+    display: flex;
+    justify-content: center;
+  }

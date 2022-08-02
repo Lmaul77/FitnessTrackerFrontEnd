@@ -12,20 +12,21 @@ const Routines = ({routines,setRoutines})=>{
     },[])
     const displayRoutines = routines.map((element,index)=>{
         return(
-            <div className = "allRoutines" key={index}>
-                <div className = "nameAllRoutines">Name: {element.name}</div>
+            <div className = "allRoutines" key={`Routine ${index}`}>
+                <div className="creatorRoutines">Creator: {element.creatorName}</div>
+                <div className = "nameAllRoutines">{element.name}</div>
                 <div className = "routineGoal"> Goal: {element.goal}</div>
-                <div className="routineIsPublic">IsPublic: {element.IsPublic}</div>
-                <div><Updateroutines id={element.id}/></div>
+                <div className="routineIsPublic">{element.IsPublic}</div>
+                <div className="updateAllRoutines"><Updateroutines id={element.id}/></div>
             </div>
 
         )
     })
     return(
         <div>
-            <h1>
+            <div className="routinesHeader">
                 ROUTINES
-            </h1>
+            </div>
             <div>
                 {displayRoutines}
             </div>

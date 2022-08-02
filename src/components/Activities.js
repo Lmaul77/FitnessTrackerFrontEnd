@@ -12,19 +12,19 @@ useEffect(() => {
 
 const displayActivities = activities.map((element, index) => {
     return (
-        <div className="allActivities" key={index}>
-            <div className="nameAllActivities">Name:  {element.name}</div>
-            <div className="descriptionAllActivities">Description:  {element.description}</div>
-            <div><Updateactivities id={element.id}/></div>
+        <div className="allActivities" key={`Activity ${index}`}>
+            <div className="nameAllActivities">{element.name}</div>
+            <div className="descriptionAllActivities">{element.description}</div>
+            <div className="updateAllActivities"><Updateactivities id={element.id}/></div>
         </div>
     )
 })
 
     return (
         <div>
-            <h1>
+            <div className="activitiesHeader">
                 ACTIVITIES
-            </h1>
+            </div>
             <div>
                 {displayActivities}
             </div>
