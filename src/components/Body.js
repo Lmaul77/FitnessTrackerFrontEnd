@@ -1,38 +1,30 @@
-import React, {useState , useEffect} from "react";
-import { Routines } from "./";
-import { Route, Routes, Link } from "react-router-dom"
+import React from "react";
+import { Routines, Activities } from "./";
+import { Route, Routes } from "react-router-dom";
 
-
-const Body = ({routines,setRoutines}) => {
-    return (
+const Body = ({ activities, setActivities, routines, setRoutines }) => {
+  return (
+    <div>
+      <div>
+        <form>
+          <button>Create</button>
+          <button>Delete</button>
+        </form>
         <div>
-            <div>
-                <form>
-                
-                    <button>
-                        Create
-                    </button>
-                    <button>
-                        Delete
-                    </button>
-                </form>
-                
-                <Routines routines={routines} setRoutines={setRoutines}/>
-                   
-                <form>
-                    <div>
-                        Activities
-                    </div>
-                    <button>
-                        Create
-                    </button>
-                    <button>
-                        Delete
-                    </button>
-                </form>
-            </div>
+          <Activities activities={activities} setActivities={setActivities} />
         </div>
-    )
-}
+        <div>
+          <Routines routines={routines} setRoutines={setRoutines} />
+        </div>
 
-export default Body
+        <form>
+          <div></div>
+          <button>Create</button>
+          <button>Delete</button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default Body;
