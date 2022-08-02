@@ -38,7 +38,6 @@ export async function getActivities() {
     },
   });
   const result = await response.json();
-  console.log(result, "line 53");
   return result;
 }
 
@@ -50,4 +49,25 @@ export async function getRoutines() {
   });
   const result = await response.json();
   return result;
+}
+
+
+export async function createRoutine(token,name,goal){
+  const response = await fetch(`${BASE_URL}/routines`, {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    },
+    body: JSON.stringify({
+        name: name,
+        goal: goal,
+        
+      
+  })
+})
+  console.log(response, "response from makeNewRoutine")
+  const result = await response.json()
+  return result
+  
 }
