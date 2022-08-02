@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Header = ({ setIsLoggedIn }) => {
+const Header = ({ isLoggedIn, setIsLoggedIn }) => {
     function logOut () {
         setIsLoggedIn(false);
         localStorage.clear("token")
@@ -16,7 +16,7 @@ const Header = ({ setIsLoggedIn }) => {
                     Welcome to YOUR Fitness Journey
                 </h2>
                     <form>
-                        {!setIsLoggedIn ? (
+                        {!isLoggedIn ? (
                             <>
                             <div>
                             <Link to="/login"> LOGIN </Link>

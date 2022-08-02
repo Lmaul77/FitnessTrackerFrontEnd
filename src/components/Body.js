@@ -1,6 +1,11 @@
 import React from "react";
+import Activities from "./Activities";
+import { Route, Routes } from "react-router-dom"
 
-const Body = () => {
+const Body = ({
+    activities,
+    setActivities
+}) => {
     return (
         <div>
             <div>
@@ -15,9 +20,11 @@ const Body = () => {
                         Delete
                     </button>
                 </form>
+                <div>
+                <Activities activities={activities} setActivities={setActivities} />
+                </div>
                 <form>
                     <div>
-                        Activities
                     </div>
                     <button>
                         Create

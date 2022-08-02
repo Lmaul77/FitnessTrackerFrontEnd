@@ -1,7 +1,7 @@
 const BASE_URL = "http://fitnesstrac-kr.herokuapp.com/api"
 
 
-export async function registerUser([registerUsername, registerPassword]){
+export async function registerUser(registerUsername, registerPassword){
       console.log(registerUsername, registerPassword, "This is line 6 API INDEX")
       const response = await 
           fetch(`${BASE_URL}/users/register`,
@@ -11,10 +11,8 @@ export async function registerUser([registerUsername, registerPassword]){
               'Content-Type': 'application/json'
             },
           body: JSON.stringify({
-              user: {
                 username: registerUsername,
                 password: registerPassword
-              }
             })
           }
           )
@@ -35,10 +33,8 @@ export async function registerUser([registerUsername, registerPassword]){
               'Content-Type': 'application/json'
             },
           body: JSON.stringify({
-              user: {
                 username: Username,
                 password: Password
-              }
             })
           }
           )
@@ -46,6 +42,17 @@ export async function registerUser([registerUsername, registerPassword]){
   
           return result.token}
    
+  export async function getActivities() {
+    const response = await
+    fetch('http://fitnesstrac-kr.herokuapp.com/api/activities', {
+  headers: {
+    'Content-Type': 'application/json',
+  },
+})
+const result = await response.json()
+console.log(result, "line 53")
+return result
+  }
   // export async function getUserInfo(token){
   //   try { 
   //     const response = await fetch(`${BASE_URL}/users/me`, {
