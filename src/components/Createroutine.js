@@ -1,62 +1,52 @@
 import react, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createRoutine } from '../api';
+import Routines from './Routines';
 
-const CreateRoutine=({name,setName,goal,setGoal})=>{
+const CreateRoutine=({routineName,setRoutineName, routineGoal,setRoutineGoal, routines, setRoutines})=>{
     const Navigate = useNavigate()
-        const handleOnChange =(event) => {
-            const changed = event.target.id
-            if (changed === 'name'){
-                setName(event.target.value)
-                console.log(name, 'name')
-            }
-            if (changed === 'goal') {
-                setGoal(event.target.value)
-                console.log(goal, "goal")
-            }
-            // if (changed === 'isPublic') {
-            //     setisPublic(event.target.value)
-            //     console.log(isPublic, 'i am the isPublic')
-            // }
-        }
     
         const handleSubmit = async (event) => {
             event.preventDefault();
             const token = localStorage.getItem("token")
-           const newRoutine= await createRoutine(name, goal);
-            setName("");
-            setGoal('');
-            setisPublic(true);
+           const newRoutine = await createRoutine(token,routineName, routineGoal);
+           setRoutines([newRoutine,...routines])
+           Navigate("/")
+
         
     
         }
     
         return (
-            <div className="newPostBox">
+            <div id ="NewRoutine">
+                <div>
+                    <h1>Create a New Routine</h1>
+                </div>
                 <form onSubmit={handleSubmit}>
-                    <div className="formProp">
-                    <label>Name: </label>
-                    <input 
-                        // className="Name"
-                        id="Name"
-                        onChange={handleOnChange}
-                        placeholder="name???"
-                        value={name}
-                    />
+                    <div>
+                        <input
+                        id="Name input"
+                        placeholder="Name"
+                        value ={routineName}
+                        onChange= {(event)=>{
+                            setRoutineName(event.target.value)
+                        }}/>
                     </div>
-                   
-                    <div className="formProp">
-                      <label>Goal:  </label>
-                    <input
-                        // className="Goal"
-                        id="Goal"
-                        onChange={handleOnChange}
-                        placeholder="what's the goal?"
-                        value={goal}
-                    />   
-                   </div>
-                   <button type="submit">Post It</button>
                 </form>
+                <div>
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <input
+                        id="Goal Input"
+                        placeholder="Goal"
+                        value ={routineGoal}
+                        onChange= {(event)=>{
+                            setRoutineGoal(event.target.value)
+                        }}/>
+                    </div>
+                    <button id="addRoutinebutton" type="submit"> CREATE A ROUTINE </button>
+                </form>
+                </div>
             </div>
         )
     

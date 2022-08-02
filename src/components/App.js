@@ -6,8 +6,8 @@ const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [activities, setActivities] = useState([]);
   const [routines, setRoutines] = useState([]);
-  const [name,setName] = useState([]);
-  const [goal,setGoal] = useState([]);
+  const [routineName,setRoutineName] = useState([]);
+  const [routineGoal,setRoutineGoal] = useState([]);
   
 
   return (
@@ -27,8 +27,10 @@ const App = () => {
         setActivities={setActivities}
         routines={routines}
         setRoutines={setRoutines}
-        name ={setName}
-        goal ={setGoal}
+        routineName = {routineName}
+        setRoutineName={setRoutineName}
+        routineGoal= {routineGoal}
+        setRoutineGoal= {setRoutineGoal}
       />
 
       <Footer />

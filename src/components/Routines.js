@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from "react";
-import { getRoutines, getUserInfo } from "../api";
+import { getRoutines } from "../api";
 
 
 
