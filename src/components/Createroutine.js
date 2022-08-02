@@ -1,9 +1,7 @@
 import react, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createRoutine } from '../api';
-import Routines from './Routines';
-
-const CreateRoutine=({routineName,setRoutineName, routineGoal,setRoutineGoal, routines, setRoutines})=>{
+const Createroutine=({routineName,setRoutineName, routineGoal,setRoutineGoal, routines, setRoutines})=>{
     const Navigate = useNavigate()
     
         const handleSubmit = async (event) => {
@@ -53,4 +51,4 @@ const CreateRoutine=({routineName,setRoutineName, routineGoal,setRoutineGoal, ro
     }
 
 
-export default CreateRoutine
+export default Createroutine

@@ -7,4 +7,4 @@ export { default as Login } from "./Login";
 export { default as Activities } from "./Activities";
 export { default as Routines } from "./Routines";
 export { default as Createactivities } from "./Createactivities";
-export { default as CreateRoutine } from "./Createroutine";
+export { default as Createroutine } from "./Createroutine";

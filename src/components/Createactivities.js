@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { createActivities } from "../api";
 
 const Createactivities = ({
-  nameInput,
-  setNameInput,
-  descriptionInput,
-  setDescriptionInput,
+  activityName,
+  setActivityName,
+  activityDescription,
+  setActivityDescription,
   activities,
   setActivities,
 }) => {
@@ -17,8 +17,8 @@ const Createactivities = ({
     const token = localStorage.getItem("token");
     const newActivity = await createActivities(
       token,
-      nameInput,
-      descriptionInput
+      activityName,
+      activityDescription
     );
     setActivities([newActivity, ...activities]);
     Navigate("/");
@@ -34,9 +34,9 @@ const Createactivities = ({
           <input
             id="AddName"
             placeholder="Name"
-            value={nameInput}
+            value={activityName}
             onChange={(event) => {
-              setNameInput(event.target.value);
+              setActivityName(event.target.value);
             }}
           />
         </div>
@@ -44,9 +44,9 @@ const Createactivities = ({
           <input
             id="AddDescription"
             placeholder="Description"
-            value={descriptionInput}
+            value={activityDescription}
             onChange={(event) => {
-              setDescriptionInput(event.target.value);
+              setActivityDescription(event.target.value);
             }}
           />
         </div>
@@ -58,4 +58,4 @@ const Createactivities = ({
   );
 };
 
-export default Createactivities
+export default Createactivities;

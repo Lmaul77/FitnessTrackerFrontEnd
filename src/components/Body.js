@@ -7,10 +7,10 @@ const Body = ({
   setActivities,
   routines,
   setRoutines,
-  nameInput,
-  setNameInput,
-  descriptionInput,
-  setDescriptionInput,
+  activityName,
+  setActivityName,
+  activityDescription,
+  setActivityDescription,
   routineName,
   setRoutineName,
   routineGoal,
@@ -33,10 +33,10 @@ const Body = ({
             <Createactivities
               activities={activities}
               setActivities={setActivities}
-              nameInput={nameInput}
-              setNameInput={setNameInput}
-              descriptionInput={descriptionInput}
-              setDescriptionInput={setDescriptionInput}
+              activityName={activityName}
+              setActivityName={setActivityName}
+              activityDescription={activityDescription}
+              setActivityDescription={setActivityDescription}
             />
           </button>
         </div>
