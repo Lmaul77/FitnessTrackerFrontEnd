@@ -51,23 +51,35 @@ export async function getRoutines() {
   return result;
 }
 
+export async function createActivities(token, nameInput, descriptionInput) {
+  const response = await fetch(`${BASE_URL}/activities`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({
+      name: nameInput,
+      description: descriptionInput,
+    }),
+  });
+  const result = await response.json();
+  return result;
+}
 
-export async function createRoutine(token,name,goal){
+export async function createRoutine(token, name, goal) {
   const response = await fetch(`${BASE_URL}/routines`, {
     method: "POST",
     headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token}`
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({
-        name: name,
-        goal: goal,
-        
-      
-  })
-})
-  console.log(response, "response from makeNewRoutine")
-  const result = await response.json()
-  return result
-  
+      name: name,
+      goal: goal,
+    }),
+  });
+  console.log(response, "response from makeNewRoutine");
+  const result = await response.json();
+  return result;
 }
