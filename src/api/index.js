@@ -1,9 +1,8 @@
-const Base_URL = "https://fitnesstrac-kr.herokuapp.com/api"
+const BASE_URL = "http://fitnesstrac-kr.herokuapp.com/api"
 
 
-export async function registerPerson(registerUsername, registerPassword){
-    try{ 
-      console.log(registerUsername, registerPassword)
+export async function registerUser([registerUsername, registerPassword]){
+      console.log(registerUsername, registerPassword, "This is line 6 API INDEX")
       const response = await 
           fetch(`${BASE_URL}/users/register`,
           {
@@ -20,15 +19,13 @@ export async function registerPerson(registerUsername, registerPassword){
           }
           )
           const result = await response.json();
-          return result.user.token
-      } catch (error){
-        throw error
-      }
-  }
-  
+          console.log( result, "This is line 22 API INDEX")
+
+          
+          return result
+      } 
 
   export async function loginUser(Username, Password){
-    try{ 
       console.log(Username, Password)
       const response = await 
           fetch(`${BASE_URL}/users/login`,
@@ -47,27 +44,23 @@ export async function registerPerson(registerUsername, registerPassword){
           )
           const result = await response.json();
   
-          return result.data.token
-      } catch (error){
-        throw error
-      }
-  }
-  export async function getUserInfo(token){
-    try { 
-      const response = await fetch(`${BASE_URL}/users/me`, {
+          return result.token}
+   
+  // export async function getUserInfo(token){
+  //   try { 
+  //     const response = await fetch(`${BASE_URL}/users/me`, {
   
-      headers: {
-        'Content-Type': "application/JSON",
-        'Authorization': `Bearer ${token}`
-      }})
+  //     headers: {
+  //       'Content-Type': "application/JSON",
+  //       'Authorization': `Bearer ${token}`
+  //     }})
       
-      const result = await response.json()
-      // const token = result.data.token
-      return result;
-    } catch (error) {
-      throw error;
-    }
-  }
+  //     const result = await response.json()
+  //     return result;
+  //   } catch (error) {
+  //     throw error;
+  //   }
+  // }
   
   
 //   export async function makeNewPost(title, description, price, location){
