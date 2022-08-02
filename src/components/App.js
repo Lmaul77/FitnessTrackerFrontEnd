@@ -15,10 +15,10 @@ const App = () => {
     return (
         <div> 
             <Header isLoggedIn={isLoggedIn} />
-      { isLoggedIn? <Userbar setIsLoggedIn={setIsLoggedIn} /> : null }
+      {/* { isLoggedIn? <Userbar setIsLoggedIn={setIsLoggedIn} /> : null } */}
             <Routes>
-            <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />}/>
-                <Route path="/register" element={<Register />}/>
+            <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />}/>8
+            <Route path="/register" element={<Register />}/>
             </Routes>
             <Body/>
            
