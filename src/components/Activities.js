@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { getActivities } from '../api';
+import { Updateactivities } from './';
 
 const Activities = ({activities, setActivities}) => {
 
@@ -9,11 +10,12 @@ useEffect(() => {
     })
 }, [])
 
-const displayActivities = activities.map((activities, index) => {
+const displayActivities = activities.map((element, index) => {
     return (
         <div className="allActivities" key={index}>
-            <div className="nameAllActivities">Name:  {activities.name}</div>
-            <div className="descriptionAllActivities">Description:  {activities.description}</div>
+            <div className="nameAllActivities">Name:  {element.name}</div>
+            <div className="descriptionAllActivities">Description:  {element.description}</div>
+            <div><Updateactivities id={element.id}/></div>
         </div>
     )
 })

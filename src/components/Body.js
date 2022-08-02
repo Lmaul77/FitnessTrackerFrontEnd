@@ -1,5 +1,5 @@
 import React from "react";
-import { Routines, Activities, Createactivities, CreateRoutine } from "./";
+import { Routines, Activities, Createactivities, Createroutine, Updateactivities, Updateroutines } from "./";
 import { Route, Routes } from "react-router-dom";
 
 const Body = ({
@@ -26,10 +26,9 @@ const Body = ({
         <div className="bodyActivites">
           <div>
             <Activities activities={activities} setActivities={setActivities} />
+            <Updateactivities />
           </div>
           <button>
-            {" "}
-            CREATE
             <Createactivities
               activities={activities}
               setActivities={setActivities}
@@ -42,8 +41,9 @@ const Body = ({
         </div>
         <div>
           <Routines routines={routines} setRoutines={setRoutines} />
+          <Updateroutines />
           <button>
-            <CreateRoutine
+            <Createroutine
               routineName={routineName}
               setRoutineName={setRoutineName}
               routineGoal={routineGoal}
