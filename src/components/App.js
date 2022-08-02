@@ -6,7 +6,9 @@ const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [activities, setActivities] = useState([]);
   const [routines, setRoutines] = useState([]);
-
+  const [nameInput, setNameInput] = useState("")
+  const [descriptionInput, setDescriptionInput] = useState("")
+  
   return (
     <div>
       <Header isLoggedIn={isLoggedIn} />
@@ -24,6 +26,10 @@ const App = () => {
         setActivities={setActivities}
         routines={routines}
         setRoutines={setRoutines}
+        nameInput={nameInput}
+        setNameInput={setNameInput}
+        descriptionInput={descriptionInput}
+        setDescriptionInput={setDescriptionInput}
       />
 
       <Footer />

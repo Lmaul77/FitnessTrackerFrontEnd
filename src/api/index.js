@@ -51,3 +51,19 @@ export async function getRoutines() {
   const result = await response.json();
   return result;
 }
+
+export async function createActivities(token, nameInput, descriptionInput) {
+  const response = await fetch(`${BASE_URL}/activities`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`
+    },
+    body: JSON.stringify({
+      name: nameInput,
+      description: descriptionInput
+    })
+  })
+  const result = await response.json()
+  return result
+}
