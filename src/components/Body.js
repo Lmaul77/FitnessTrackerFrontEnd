@@ -1,8 +1,17 @@
 import React from "react";
-import { Routines, Activities } from "./";
+import { Routines, Activities, CreateRoutine } from "./";
 import { Route, Routes } from "react-router-dom";
 
-const Body = ({ activities, setActivities, routines, setRoutines }) => {
+const Body = ({
+  activities,
+  setActivities,
+  routines,
+  setRoutines,
+  routineName,
+  setRoutineName,
+  routineGoal,
+  setRoutineGoal,
+}) => {
   return (
     <div>
       <div>
@@ -15,6 +24,16 @@ const Body = ({ activities, setActivities, routines, setRoutines }) => {
         </div>
         <div>
           <Routines routines={routines} setRoutines={setRoutines} />
+          <button>
+            <CreateRoutine
+              routineName={routineName}
+              setRoutineName={setRoutineName}
+              routineGoal={routineGoal}
+              setRoutineGoal={setRoutineGoal}
+              routines={routines}
+              setRoutines={setRoutines}
+            />
+          </button>
         </div>
 
         <form>

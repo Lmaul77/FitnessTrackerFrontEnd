@@ -6,6 +6,9 @@ const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [activities, setActivities] = useState([]);
   const [routines, setRoutines] = useState([]);
+  const [routineName,setRoutineName] = useState([]);
+  const [routineGoal,setRoutineGoal] = useState([]);
+  
 
   return (
     <div>
@@ -24,6 +27,10 @@ const App = () => {
         setActivities={setActivities}
         routines={routines}
         setRoutines={setRoutines}
+        routineName = {routineName}
+        setRoutineName={setRoutineName}
+        routineGoal= {routineGoal}
+        setRoutineGoal= {setRoutineGoal}
       />
 
       <Footer />
