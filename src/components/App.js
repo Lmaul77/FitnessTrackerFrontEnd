@@ -5,12 +5,14 @@ import {
     Footer,
     Body,
     Register,
-    Login
+    Login,
+    Routines
 
 } from "./"
 
 const App = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false)
+    const [routines, setRoutines] = useState([])
 
     return (
         <div> 
@@ -20,7 +22,7 @@ const App = () => {
             <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />}/>8
             <Route path="/register" element={<Register />}/>
             </Routes>
-            <Body/>
+            <Body routines={routines} setRoutines={setRoutines}/>
            
             
             <Footer/>

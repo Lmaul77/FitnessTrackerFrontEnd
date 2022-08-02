@@ -1,13 +1,14 @@
-import React from "react";
+import React, {useState , useEffect} from "react";
+import { Routines } from "./";
+import { Route, Routes, Link } from "react-router-dom"
 
-const Body = () => {
+
+const Body = ({routines,setRoutines}) => {
     return (
         <div>
             <div>
                 <form>
-                    <div>
-                        Routines
-                    </div>
+                
                     <button>
                         Create
                     </button>
@@ -15,6 +16,9 @@ const Body = () => {
                         Delete
                     </button>
                 </form>
+                
+                <Routines routines={routines} setRoutines={setRoutines}/>
+                   
                 <form>
                     <div>
                         Activities
