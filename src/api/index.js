@@ -116,6 +116,51 @@ export async function updateRoutine(token, routineName, routineGoal, id) {
   return result
 }
 
+export async function deleteRoutine(token, id) {
+  const response = await fetch(`${BASE_URL}/routines/${id}`, {
+    method: "DELETE",
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`
+    }
+  })
+  const result = await response.json()
+    return result
+}
+
+export async function attachActivityToRoutine(token, activityId, count, duration) {
+  const response = await fetch(`${BASE_URL}/routines/${id}/activities`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({
+      activityId: activityId,
+      count: count, 
+      duration: duration
+    })
+  })
+  const result = await response.json()
+  return result
+}
+
+export async function updateRoutineActivities(token, id, count, duration) {
+  const response = await fetch(`${BASE_URL}/api/routine_activities/${id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({
+      count: count,
+      duration: duration
+    })
+  })
+  const result = await response.json()
+  return result
+}
+
 export async function getUser(token){
   try { 
     const response = await fetch(`${BASE_URL}/users/me`, {
@@ -131,6 +176,7 @@ export async function getUser(token){
     throw error;
   }
 }
+
 export async function getUserRoutines(token, username){
   try { 
     const response = await fetch(`${BASE_URL}/users/${username}/routines`, {
