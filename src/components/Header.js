@@ -27,6 +27,9 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
                             </> ) : (
                             <>
                             <div>
+                                <Link to="/Userroutines"> My Routines </Link> 
+                            </div>
+                            <div>
                             <button onClick={logOut}>LOG OUT!</button>
                             </div>
                             </> )
