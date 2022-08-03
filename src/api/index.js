@@ -128,13 +128,9 @@ export async function deleteRoutine(token, id) {
     return result
 }
 
-export async function attachActivityToRoutine(token, activityId, count, duration) {
-  const response = await fetch(`${BASE_URL}/routines/${id}/activities`, {
+export async function attachActivityToRoutine(activityId, count, duration, routineId) {
+  const response = await fetch(`${BASE_URL}/routines/${routineId}/activities`, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
-    },
     body: JSON.stringify({
       activityId: activityId,
       count: count, 
@@ -191,4 +187,15 @@ export async function getUserRoutines(token, username){
   } catch (error) {
     throw error;
   }
+}
+
+export async function getRoutinesWithActivities(token, id) {
+  const response = await fetch(`${BASE_URL}/activities/${id}/routines`, {
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    },
+  })
+  const result = await response.json()
+  return result
 }
