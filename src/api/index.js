@@ -115,3 +115,34 @@ export async function updateRoutine(token, routineName, routineGoal, id) {
   const result = await response.json()
   return result
 }
+
+export async function getUser(token){
+  try { 
+    const response = await fetch(`${BASE_URL}/users/me`, {
+
+    headers: {
+      'Content-Type': "application/JSON",
+      'Authorization': `Bearer ${token}`
+    }})
+    
+    const result = await response.json()
+    return result;
+  } catch (error) {
+    throw error;
+  }
+}
+export async function getUserRoutines(token){
+  try { 
+    const response = await fetch(`${BASE_URL}/users/:username/routines`, {
+
+    headers: {
+      'Content-Type': "application/JSON",
+      'Authorization': `Bearer ${token}`
+    }})
+    
+    const result = await response.json()
+    return result;
+  } catch (error) {
+    throw error;
+  }
+}
