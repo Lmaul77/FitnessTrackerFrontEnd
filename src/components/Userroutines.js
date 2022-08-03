@@ -4,7 +4,7 @@ import { getUser,getUserRoutines } from "../api";
 
 
 
-const UserRoutines = ()=>{
+const Userroutines = ()=>{
     const [privateRoutines, setPrivateRoutines] = useState([])
     const [user,setUser] = useState([])
     useEffect(()=>{
@@ -39,4 +39,4 @@ const UserRoutines = ()=>{
 }
 
 
-export default UserRoutines;
+export default Userroutines;

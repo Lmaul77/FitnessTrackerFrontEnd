@@ -1,5 +1,14 @@
 import React from "react";
-import { Routines, Activities, Createactivities, Createroutine, Updateactivities, Updateroutines, UserRoutines } from "./";
+import {
+  Routines,
+  Activities,
+  Createactivities,
+  Createroutine,
+  Updateactivities,
+  Updateroutines,
+  Userroutines,
+  Profilebar
+} from "./";
 import { Route, Routes } from "react-router-dom";
 
 const Body = ({
@@ -18,16 +27,10 @@ const Body = ({
 }) => {
   return (
     <div className="fullBody">
-      <div>
-        <form>
-          <button>Create</button>
-          <button>Delete</button>
-        </form>
+      <Profilebar/>
         <div className="bodyActivities">
-          <div>
             <Activities activities={activities} setActivities={setActivities} />
             <Updateactivities />
-          </div>
           <button>
             <Createactivities
               activities={activities}
@@ -41,7 +44,6 @@ const Body = ({
         </div>
         <div className="bodyRoutines">
           <Routines routines={routines} setRoutines={setRoutines} />
-         
           <Updateroutines />
           <button>
             <Createroutine
@@ -54,14 +56,8 @@ const Body = ({
             />
           </button>
         </div>
- <UserRoutines/>
-        <form>
-          <div></div>
-          <button>Create</button>
-          <button>Delete</button>
-        </form>
+        {/* <Userroutines /> */}
       </div>
-    </div>
   );
 };
 

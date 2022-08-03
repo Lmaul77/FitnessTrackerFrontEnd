@@ -13,7 +13,8 @@ const App = () => {
   
 
   return (
-    <div>
+    <>
+      <header>
       <Header isLoggedIn={isLoggedIn} />
       {/* { isLoggedIn? <Userbar setIsLoggedIn={setIsLoggedIn} /> : null } */}
       <Routes>
@@ -24,6 +25,8 @@ const App = () => {
 
         <Route path="/register" element={<Register />} />
       </Routes>
+      </header>
+      <body>
       <Body
         activities={activities}
         setActivities={setActivities}
@@ -38,9 +41,11 @@ const App = () => {
         routineGoal= {routineGoal}
         setRoutineGoal= {setRoutineGoal}
       />
-
+      </body>
+      <footer>
       <Footer />
-    </div>
+      </footer>
+      </>
   );
 };
 

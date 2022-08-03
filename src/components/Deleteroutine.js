@@ -1,5 +1,5 @@
 import React from 'react';
-import deleteRoutine from "../api"
+import { deleteRoutine } from "../api"
 
 const Deleteroutine = () => {
     

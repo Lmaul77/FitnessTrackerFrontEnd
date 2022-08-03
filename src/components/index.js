@@ -11,4 +11,5 @@ export { default as Createroutine } from "./Createroutine";
 export { default as Updateactivities } from "./Updateactivities"
 export { default as Updateroutines } from "./Updateroutines"
 export { default as Deleteroutine } from "./Deleteroutine"
-export { default as UserRoutines } from "./UserRoutines"
+export { default as Userroutines } from "./Userroutines"
+export { default as Profilebar } from "./Profilebar"
