@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Route, Routes, Link } from "react-router-dom";
-import { Header, Footer, Body, Register, Login } from "./";
+import { Header, Footer, Body, Register, Login, Createactivities } from "./";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -22,7 +22,7 @@ const App = () => {
           path="/login"
           element={<Login setIsLoggedIn={setIsLoggedIn} />}
         />
-
+          <Route path="/createActivities" element={<Createactivities />}/>  
         <Route path="/register" element={<Register />} />
       </Routes>
       </header>

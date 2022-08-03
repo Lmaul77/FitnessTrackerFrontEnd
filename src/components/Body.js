@@ -27,25 +27,12 @@ const Body = ({
 }) => {
   return (
     <div className="fullBody">
+      <div> 
       <Profilebar/>
-        <div className="bodyActivities">
-            <Activities activities={activities} setActivities={setActivities} />
-            <Updateactivities />
-          <button>
-            <Createactivities
-              activities={activities}
-              setActivities={setActivities}
-              activityName={activityName}
-              setActivityName={setActivityName}
-              activityDescription={activityDescription}
-              setActivityDescription={setActivityDescription}
-            />
-          </button>
-        </div>
-        <div className="bodyRoutines">
-          <Routines routines={routines} setRoutines={setRoutines} />
-          <Updateroutines />
-          <button>
+       {/* <Userroutines />
+        <Updateroutines /> */}
+     
+{/*      
             <Createroutine
               routineName={routineName}
               setRoutineName={setRoutineName}
@@ -54,9 +41,27 @@ const Body = ({
               routines={routines}
               setRoutines={setRoutines}
             />
-          </button>
+        
+            <Createactivities
+              activities={activities}
+              setActivities={setActivities}
+              activityName={activityName}
+              setActivityName={setActivityName}
+              activityDescription={activityDescription}
+              setActivityDescription={setActivityDescription}
+            /> */}
+         
+      </div>
+     
+        <div className="bodyActivities">
+            <Activities activities={activities} setActivities={setActivities} />
+        
         </div>
-        {/* <Userroutines /> */}
+        <div className="bodyRoutines">
+          <Routines routines={routines} setRoutines={setRoutines} />   
+         
+        </div>
+        
       </div>
   );
 };
