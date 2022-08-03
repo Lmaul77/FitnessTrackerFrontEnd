@@ -51,7 +51,7 @@ export async function getRoutines() {
   return result;
 }
 
-export async function createActivities(token, nameInput, descriptionInput) {
+export async function createActivities(token, activityName, activityDescription) {
   const response = await fetch(`${BASE_URL}/activities`, {
     method: "POST",
     headers: {
@@ -59,15 +59,15 @@ export async function createActivities(token, nameInput, descriptionInput) {
       Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({
-      name: nameInput,
-      description: descriptionInput,
+      name: activityName,
+      description: activityDescription,
     }),
   });
   const result = await response.json();
   return result;
 }
 
-export async function createRoutine(token, name, goal) {
+export async function createRoutine(token, routineName, routineGoal) {
   const response = await fetch(`${BASE_URL}/routines`, {
     method: "POST",
     headers: {
@@ -75,11 +75,43 @@ export async function createRoutine(token, name, goal) {
       Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({
-      name: name,
-      goal: goal,
+      name: routineName,
+      goal: routineGoal,
+      isPublic: true
     }),
   });
-  console.log(response, "response from makeNewRoutine");
   const result = await response.json();
   return result;
+}
+
+export async function updateActivity(token, activityName, activityDescription, id) {
+  const response = await fetch(`${BASE_URL}/activities/${id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({
+      name: activityName,
+      description: activityDescription
+    })
+  })
+  const result = await response.json()
+  return result
+}
+
+export async function updateRoutine(token, routineName, routineGoal, id) {
+  const response = await fetch(`${BASE_URL}/routines/${id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({
+      name: routineName,
+      goal: routineGoal
+    })
+  })
+  const result = await response.json()
+  return result
 }

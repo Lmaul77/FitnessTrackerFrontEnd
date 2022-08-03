@@ -6,10 +6,10 @@ const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [activities, setActivities] = useState([]);
   const [routines, setRoutines] = useState([]);
-  const [activityName, setActivityName] = useState([])
-  const [activityDescription, setActivityDescription] = useState([])
-  const [routineName,setRoutineName] = useState([]);
-  const [routineGoal,setRoutineGoal] = useState([]);
+  const [activityName, setActivityName] = useState("")
+  const [activityDescription, setActivityDescription] = useState("")
+  const [routineName,setRoutineName] = useState("");
+  const [routineGoal,setRoutineGoal] = useState("");
   
 
   return (
