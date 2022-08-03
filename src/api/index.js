@@ -131,9 +131,9 @@ export async function getUser(token){
     throw error;
   }
 }
-export async function getUserRoutines(token){
+export async function getUserRoutines(token, username){
   try { 
-    const response = await fetch(`${BASE_URL}/users/:username/routines`, {
+    const response = await fetch(`${BASE_URL}/users/${username}/routines`, {
 
     headers: {
       'Content-Type': "application/JSON",
