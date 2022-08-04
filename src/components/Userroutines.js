@@ -32,7 +32,7 @@ const UserRoutines = ()=>{
                   <h3>Goal: {goal}</h3>
                   <h5 className="creatorRoutines">Creator: {creatorId} </h5>
                   <div className="routine_activities">
-                    <AttachRoutine activityList={activityList}/>
+                    <AttachRoutine activityList={activityList} routineId={id}/>
                     { activities ? activities.map((activity, index) => (
                       <div key={`allRoutinesActs: ${activity.id}`}>
                         <h4>Activity Name: {activity.name}</h4>
