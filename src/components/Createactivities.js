@@ -20,7 +20,7 @@ const Createactivities = ({
       activityName,
       activityDescription
     );
-    setActivities([newActivity, ...activities]);
+    // setActivities([newActivity, ...activities]);
     Navigate("/");
   }
 

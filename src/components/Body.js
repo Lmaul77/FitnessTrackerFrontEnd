@@ -54,12 +54,24 @@ const Body = ({
       </div>
       <Routes>
         <Route path="/activites" element={<Activities />} />
-        <Route path="/createActivities" element={<Createactivities />} />
+        <Route
+          path="/createActivities"
+          element={
+            <Createactivities
+              activities={activities}
+              setActivities={setActivities}
+              activityName={activityName}
+              setActivityName={setActivityName}
+              activityDescription={activityDescription}
+              setActivityDescription={setActivityDescription}
+            />
+          }
+        />
         <Route path="/routineActivities/:id" element={<RoutineActivities />} />
         <Route path="/userRoutines" element={<Userroutines />} />
         <Route
           path="/allRoutines"
-          element={<Routines routines={routines} setRoutines={setRoutines}/>}
+          element={<Routines routines={routines} setRoutines={setRoutines} />}
         />
       </Routes>
       {/* <div className="bodyActivities">
