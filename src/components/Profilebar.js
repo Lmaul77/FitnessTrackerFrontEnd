@@ -8,7 +8,7 @@ const Profilebar = () => {
             <Link to="/activities"> Activities </Link>
             <Link to="/createActivities"> Create Activity </Link>
             <div><Link to="/createRoutine"> Create Routine </Link></div>
-            <Link to="/routineActivities">add activities to a routine</Link>
+            <Link to="/RoutineActivities">Routine Activities</Link>
             <Link to="/userRoutines">My Routines</Link>
             <Link to="/allRoutines">All routines</Link>
         </div>
