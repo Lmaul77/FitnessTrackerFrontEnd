@@ -6,6 +6,7 @@ import {
   getUser,
   getUserRoutines,
 } from "../api";
+import Updateroutine_activities from "./Updateroutine_activities";
 
 const Userroutines = () => {
   const [privateRoutines, setPrivateRoutines] = useState([]);
@@ -17,6 +18,9 @@ const Userroutines = () => {
   const [count, setCount] = useState("")
   const [duration, setDuration] = useState("")
   const [user, setUser] = useState([]);
+  const [showAddForm, setShowAddForm] = useState(null);
+  const [showActivityForm, setShowActivityForm] = useState(null)
+  const [showUpdateForm, setShowUpdateForm] = useState(null)
 
   useEffect(() => {
     async function getPageData() {
@@ -57,7 +61,9 @@ const Userroutines = () => {
                 <div className="UserName">{name}</div>
                 <div className="UserGoal">{goal}</div>
               </div>
-              <fieldset>
+              {showAddForm == id ? (
+                <>
+                <fieldset>
                 <label htmlFor="select-activity">
                   Activities{" "}
                   <span className="activities-count">
@@ -107,6 +113,68 @@ const Userroutines = () => {
                 />
               </label>
               <button type="Submit">ATTACH</button>
+              <button onClick={(()=> {
+                setShowAddForm(null)
+              })}>
+                CANCEL 
+              </button>
+                </>
+              ) : (
+                <button onClick={() => {
+                  setShowAddForm(id) 
+                }}>
+                    ADD ACTIVITY HERE
+                </button>
+              )
+
+              }
+              {showActivityForm == id ? (
+                <>
+                {privateRoutines.map((element) => (
+                    element.activities.map((activity) => (
+                        <>
+                        <div>{activity.name}</div>
+                        <div>Description: {activity.description}</div>
+                        <div>Count: {activity.count}</div>
+                        <div>Duration: {activity.duration}</div>
+                        <div>Activity Id: {activity.id}</div>
+                        {showUpdateForm == id ? (
+                <>
+                <Updateroutine_activities />
+              <button onClick={(()=> {
+                setShowUpdateForm(null)
+              })}>
+                CANCEL 
+              </button>
+                </>
+              ) : (
+                <button onClick={() => {
+                  setShowUpdateForm(id) 
+                }}>
+                    UPDATE
+                </button>
+              )
+
+              }
+                        </>
+                    ))
+                ))
+                }
+              <button onClick={(()=> {
+                setShowActivityForm(null)
+              })}>
+                CANCEL 
+              </button>
+                </>
+              ) : (
+                <button onClick={() => {
+                  setShowActivityForm(id) 
+                }}>
+                    SHOW ACTIVITIES
+                </button>
+              )
+
+              }
             </div>
             </form>
           );

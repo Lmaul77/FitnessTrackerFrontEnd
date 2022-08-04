@@ -19,7 +19,7 @@ const Updateroutine_activities = ({id}) => {
         </div>
         <form onSubmit={handleSubmit}>
         <div>
-            <Input 
+            <input 
             id="updateCount"
             placeholder="count"
             value={count}

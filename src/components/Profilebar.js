@@ -10,6 +10,7 @@ const Profilebar = () => {
             <div>create routine</div>
             <Link to="/routineActivities">add activities to a routine</Link>
             <Link to="/userRoutines">My Routines</Link>
+            <Link to="/allRoutines">All routines</Link>
         </div>
     )
 }
