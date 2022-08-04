@@ -165,3 +165,55 @@
     background-color: white;
     box-shadow: 0 2px 4px 0 #6b9ac4;
   }
+
+  /* This is our createActivity.css */
+
+  #addActivity {
+    position: relative;
+    right: 500px;
+    top: 200px;
+    box-sizing: border-box;
+    background-color: #4059ad;
+    box-shadow: 0 2px 4px 0 #6b9ac4;
+    height: 400px;
+    width: 500px;
+  }
+
+  .createActivityHeader {
+    text-align: center;
+    background-color: black;
+    color: white;
+  }
+  
+  /* This is our Attachactivitytoroutine.css */
+
+  #attachRoutinesBox {
+    position: relative;
+    right: 400px;
+    top: 150px;
+    box-sizing: border-box;
+    background-color: #4059ad;
+    box-shadow: 0 2px 4px 0 #6b9ac4;
+    height: 500px;
+    width: 700px;
+    overflow: scroll;
+  }
+
+  /* This is our Userroutines.css */
+
+  .userRoutines {
+    position: relative;
+    right: 400px;
+    top: 150px;
+    box-sizing: border-box;
+    background-color: #4059ad;
+    box-shadow: 0 2px 4px 0 #6b9ac4;
+    height: 500px;
+    width: 700px;
+    overflow: scroll;
+  }
+  
+  .singleRoutines {
+    background-color: white;
+    border: 2px solid black;
+  }

@@ -5,10 +5,12 @@ const Profilebar = () => {
     return (
         <div className="Profilebar">
             <h1>NAVIGATION WORDS</h1>
-            <div><Link to="/Profile"> Your Profile </Link></div>
-            <div><Link to="/createActivities"> Create Activity </Link></div>
+            <Link to="/activities"> Activities </Link>
+            <Link to="/createActivities"> Create Activity </Link>
             <div>create routine</div>
-            <div>add activities to a routine</div>
+            <Link to="/routineActivities">add activities to a routine</Link>
+            <Link to="/userRoutines">My Routines</Link>
+            <Link to="/allRoutines">All routines</Link>
         </div>
     )
 }

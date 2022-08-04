@@ -22,7 +22,6 @@ const App = () => {
           path="/login"
           element={<Login setIsLoggedIn={setIsLoggedIn} />}
         />
-          <Route path="/createActivities" element={<Createactivities />}/>  
         <Route path="/register" element={<Register />} />
       </Routes>
       </header>

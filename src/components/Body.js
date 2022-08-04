@@ -7,7 +7,8 @@ import {
   Updateactivities,
   Updateroutines,
   Userroutines,
-  Profilebar
+  Profilebar,
+  RoutineActivities,
 } from "./";
 import { Route, Routes } from "react-router-dom";
 
@@ -27,12 +28,12 @@ const Body = ({
 }) => {
   return (
     <div className="fullBody">
-      <div> 
-      <Profilebar/>
-       {/* <Userroutines />
+      <div>
+        <Profilebar />
+        {/* <Userroutines />
         <Updateroutines /> */}
-     
-{/*      
+
+        {/*      
             <Createroutine
               routineName={routineName}
               setRoutineName={setRoutineName}
@@ -50,19 +51,26 @@ const Body = ({
               activityDescription={activityDescription}
               setActivityDescription={setActivityDescription}
             /> */}
-         
       </div>
-     
-        <div className="bodyActivities">
+      <Routes>
+        <Route path="/activites" element={<Activities />} />
+        <Route path="/createActivities" element={<Createactivities />} />
+        <Route path="/routineActivities/:id" element={<RoutineActivities />} />
+        <Route path="/userRoutines" element={<Userroutines />} />
+        <Route
+          path="/allRoutines"
+          element={<Routines routines={routines} setRoutines={setRoutines}/>}
+        />
+      </Routes>
+      {/* <div className="bodyActivities">
             <Activities activities={activities} setActivities={setActivities} />
         
         </div>
         <div className="bodyRoutines">
           <Routines routines={routines} setRoutines={setRoutines} />   
          
-        </div>
-        
-      </div>
+        </div> */}
+    </div>
   );
 };
 
