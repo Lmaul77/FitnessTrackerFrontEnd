@@ -23,9 +23,6 @@ const Userroutines = () => {
       const token = localStorage.getItem("token");
       const userData = await getUser(token);
       setUser(userData);
-      const routineData = await getRoutines();
-      const routineDataId = routineData.id;
-      setRoutineId(routineDataId);
       const userRoutines = await getUserRoutines(token, userData.username);
       setPrivateRoutines(userRoutines);
       Promise.all([getActivities()]).then(([activities]) => {
@@ -37,6 +34,8 @@ const Userroutines = () => {
 
   async function handleSubmit(event) {
     event.preventDefault();
+      const routineId = event.target[0].value
+    console.log(activityId, routineId, "INSIDE HANDLE SUBMIT")
     await attachActivityToRoutine(activityId, count, duration, routineId);
   }
 
@@ -48,6 +47,11 @@ const Userroutines = () => {
             <form onSubmit={handleSubmit}>
             <div>
               <div className="singleRoutines" key={id}>
+                <input
+                name="routines"
+                value={id}
+                type="hidden"
+                />
                 <div className="creatorName">Creator: {creatorName}</div>
                 <h1 id="creatorId">ID: {creatorId}</h1>
                 <div className="UserName">{name}</div>
@@ -74,7 +78,7 @@ const Userroutines = () => {
                       key={`${idx}:${activities.name}`}
                       value={activities.id}
                     >
-                      {activities.name}
+                      {activities.name}{activities.id}
                     </option>
                   ))}
                 </select>

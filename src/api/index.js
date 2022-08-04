@@ -130,6 +130,9 @@ export async function deleteRoutine(token, id) {
 
 export async function attachActivityToRoutine(activityId, count, duration, routineId) {
   const response = await fetch(`${BASE_URL}/routines/${routineId}/activities`, {
+    headers: {
+      'Content-Type': 'application/json'
+    },
     method: "POST",
     body: JSON.stringify({
       activityId: activityId,
