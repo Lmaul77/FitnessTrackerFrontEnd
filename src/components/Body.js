@@ -53,7 +53,12 @@ const Body = ({
             /> */}
       </div>
       <Routes>
-        <Route path="/activites" element={<Activities />} />
+        <Route
+          path="/activities"
+          element={
+            <Activities activities={activities} setActivities={setActivities} />
+          }
+        />
         <Route
           path="/createActivities"
           element={
