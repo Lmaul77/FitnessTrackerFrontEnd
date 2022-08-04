@@ -186,6 +186,7 @@ export async function getUserRoutines(token, username){
     }})
     
     const result = await response.json()
+    console.log(result, "API RESULTS GET USER")
     return result;
   } catch (error) {
     throw error;

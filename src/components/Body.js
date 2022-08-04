@@ -72,7 +72,7 @@ const Body = ({
             />
           }
         />
-        <Route path="/routineActivities/:id" element={<RoutineActivities />} />
+        <Route path="/RoutineActivities" element={<RoutineActivities routines={routines} setRoutines={setRoutines}/>} />
         <Route path="/userRoutines" element={<Userroutines />} />
         <Route path="/createRoutine" element={<Createroutine  routineName={routineName}
               setRoutineName={setRoutineName}
