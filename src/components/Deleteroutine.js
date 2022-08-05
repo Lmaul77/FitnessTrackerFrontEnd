@@ -13,7 +13,7 @@ const Deleteroutine = ({id}) => {
     return(
         <form onSubmit={handleDelete}>
             <button id="deleteButton" type="Submit">
-                DELETE
+                DELETE ROUTINE
             </button>
         </form>
     )

@@ -32,7 +32,7 @@ const UserRoutines = ()=>{
                   <h5 className="creatorRoutines">Creator: {creatorId} </h5> 
                    
                    <AttachRoutine activityList={activityList} routineId={id}/>
-                    
+                     <Deleteroutine id={id}/> 
                   <div className="routine_activities">
                   
                     { activities ? activities.map((activity, index) => (
@@ -44,7 +44,6 @@ const UserRoutines = ()=>{
                           <li>Duration: {activity.duration}</li>
                         </ul>
                         <div><UpdateRoutine_Activities id={id} username={creatorName} routineActivityId={activity.routineActivityId}/></div>
-                        <div> <Deleteroutine id={id}/> </div>
                       </div>
                     )): <div> send help</div>}
                   </div>
