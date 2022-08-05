@@ -4,6 +4,7 @@ const Profilebar = ({isLoggedIn}) => {
     return (
         <div className="Profilebar">
             <h1>NAVIGATION WORDS</h1>
+
             {isLoggedIn ? (
             <div>
             <div><Link to="/userRoutines">My Routines</Link></div>
@@ -21,6 +22,7 @@ const Profilebar = ({isLoggedIn}) => {
             </div>
             )
             }
+
            
         </div>
     )

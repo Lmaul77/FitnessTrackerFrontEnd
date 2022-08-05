@@ -207,6 +207,7 @@ export async function getRoutinesWithActivities(token, id) {
   return result
 }
 
+
 export async function deleteActivityFromRoutine(token, id) {
   const response = await fetch(`${BASE_URL}/routine_activities/${id}`, {
     method: "DELETE",
