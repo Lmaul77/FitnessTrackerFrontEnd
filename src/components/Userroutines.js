@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from "react";
 import { getUser,getUserRoutines,getActivities } from "../api";
-import {AttachRoutine } from "./";
+import { AttachRoutine, UpdateRoutine_Activities,Updateactivities } from "./";
 
 
 
@@ -16,7 +16,6 @@ const UserRoutines = ()=>{
             setUser(userData)
             const userRoutines = await  getUserRoutines(token, userData.username)
             setPrivateRoutines(userRoutines)
-            console.log(privateRoutines,"show me line 17")
             Promise.all([getActivities()]).then(([activities]) => {
               setActivityList(activities);})
         }
@@ -25,14 +24,17 @@ const UserRoutines = ()=>{
     },[])
     return(
         <div>
-            {privateRoutines.length ? privateRoutines.map(({creatorId, name, goal, id, activities})=>{
+            {privateRoutines.length ? privateRoutines.map(({creatorId, name, goal, id, activities,creatorName})=>{
                 return(
                   <div className="allRoutines" key={`${id}`}>
                   <h2 className="nameAllRoutines">Name: {name}</h2>
                   <h3>Goal: {goal}</h3>
-                  <h5 className="creatorRoutines">Creator: {creatorId} </h5>
+                  <h5 className="creatorRoutines">Creator: {creatorId} </h5> 
+                   
+                   <AttachRoutine activityList={activityList} routineId={id}/>
+                    
                   <div className="routine_activities">
-                    <AttachRoutine activityList={activityList} routineId={id}/>
+                  
                     { activities ? activities.map((activity, index) => (
                       <div key={`allRoutinesActs: ${activity.id}`}>
                         <h4>Activity Name: {activity.name}</h4>
@@ -41,6 +43,7 @@ const UserRoutines = ()=>{
                           <li>Count: {activity.count} </li>
                           <li>Duration: {activity.duration}</li>
                         </ul>
+                        <div><UpdateRoutine_Activities id={id} username={creatorName} routineActivityId={activity.routineActivityId}/></div>
                       </div>
                     )): <div> send help</div>}
                   </div>
