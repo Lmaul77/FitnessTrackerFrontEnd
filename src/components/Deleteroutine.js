@@ -1,12 +1,13 @@
 import React from 'react';
 import { deleteRoutine } from "../api"
 
-const Deleteroutine = () => {
+const Deleteroutine = ({id}) => {
     
     async function handleDelete(event) {
         event.preventDefault()
         const token = localStorage.getItem("token")
         await deleteRoutine(token, id)
+        console.log(id, "HOPEFULLY DELETING THIS ROUTING BRO")
     }
     
     return(

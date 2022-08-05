@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from "react";
 import { getUser,getUserRoutines,getActivities } from "../api";
-import { AttachRoutine, UpdateRoutine_Activities,Updateactivities } from "./";
+import { AttachRoutine, UpdateRoutine_Activities, Deleteroutine } from "./";
 
 
 
@@ -44,6 +44,7 @@ const UserRoutines = ()=>{
                           <li>Duration: {activity.duration}</li>
                         </ul>
                         <div><UpdateRoutine_Activities id={id} username={creatorName} routineActivityId={activity.routineActivityId}/></div>
+                        <div> <Deleteroutine id={id}/> </div>
                       </div>
                     )): <div> send help</div>}
                   </div>
