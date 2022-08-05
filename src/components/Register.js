@@ -1,6 +1,5 @@
+import React, { useState } from "react";
 import { registerUser } from "../api";
-import React, {useState} from "react";
-import { ReactDOM } from "react-dom";
 
 
 const Register = () => {

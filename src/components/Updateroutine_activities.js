@@ -1,8 +1,6 @@
-import react, { useState } from "react";
+import { useState } from "react";
 import {
-  updateRoutineActivities,
-  updateActivity,
-  getUserRoutines,
+  getUserRoutines, updateRoutineActivities
 } from "../api";
 // ITS TRYING TO PUSH ROUTINE ID WHEN I NEED ROUTINEACITIVITYID INSIDE ACTIVITIES ARRAY
 const UpdateRoutine_Activities = ({id, username, routineActivityId}) => {

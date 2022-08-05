@@ -1,36 +1,35 @@
-import React, {useState,useEffect} from "react";
-import { getRoutines } from "../api";
-import { Updateroutines } from './';
+import React, { useState } from "react";
+import { AttachRoutine, Deleteactivity, Deleteroutine, UpdateRoutine_Activities } from './';
 
 
 
-const SingleRoutine = ({routines,setRoutines})=>{
-    useEffect(()=>{
-        getRoutines().then((results)=>{
-            setRoutines(results)
-        })
-    },[])
-    const displayRoutines = routines.map((element,index)=>{
-        return(
-            <div className = "allRoutines" key={`Routine ${index}`}>
-                <div className="creatorRoutines">Creator: {element.creatorName}</div>
-                <div className = "nameAllRoutines">{element.name}</div>
-                <div className = "routineGoal"> Goal: {element.goal}</div>
-                <div className="routineIsPublic">{element.IsPublic}</div>
-                <div className="updateAllRoutines"><Updateroutines id={element.id}/></div>
-            </div>
-
-        )
-    })
+const SingleRoutine = ({routine, activityList})=>{
+    const [thisRoutine, setThisRoutine] = useState(routine)
+    const {creatorId, name, goal, id, activities,creatorName} = thisRoutine
     return(
-        <div>
-            <div className="routinesHeader">
-                ROUTINES
-            </div>
-            <div>
-                {displayRoutines}
-            </div>
-        </div>
+        <>
+      <div className="allRoutines" key={`${id}`}>
+      <h2 className="nameAllRoutines">Name: {name}</h2>
+      <h3>Goal: {goal}</h3>
+      <h5 className="creatorRoutines">Creator: {creatorId} </h5> 
+       <AttachRoutine thisRoutine={thisRoutine} setThisRoutine={setThisRoutine} activityList={activityList} routineId={id}/>
+         <Deleteroutine id={id}/> 
+      <div className="routine_activities">
+        { activities ? activities.map((activity, index) => (
+          <div key={`allRoutinesActs: ${activity.id}`}>
+            <h4>Activity Name: {activity.name}</h4>
+            <ul>
+              <li>Description: {activity.description}</li>
+              <li>Count: {activity.count} </li>
+              <li>Duration: {activity.duration}</li>
+            </ul>
+            <div><UpdateRoutine_Activities id={id} username={creatorName} routineActivityId={activity.routineActivityId}/></div>
+            <Deleteactivity routineActivityId={activity.routineActivityId} />
+          </div>
+        )): <div> send help</div>}
+      </div>
+    </div>
+    </>
     )
 }
 

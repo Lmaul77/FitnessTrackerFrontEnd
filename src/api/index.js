@@ -128,6 +128,8 @@ export async function deleteRoutine(token, id) {
     return result
 }
 
+
+
 export async function attachActivityToRoutine(activityId, count, duration, routineId) {
   const response = await fetch(`${BASE_URL}/routines/${routineId}/activities`, {
     headers: {
@@ -205,3 +207,15 @@ export async function getRoutinesWithActivities(token, id) {
   return result
 }
 
+
+export async function deleteActivityFromRoutine(token, id) {
+  const response = await fetch(`${BASE_URL}/routine_activities/${id}`, {
+    method: "DELETE",
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    }
+  })
+  const result = await response.json()
+  return result
+}

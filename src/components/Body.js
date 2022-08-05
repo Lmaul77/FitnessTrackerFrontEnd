@@ -4,8 +4,6 @@ import {
   Activities,
   Createactivities,
   Createroutine,
-  Updateactivities,
-  Updateroutines,
   Userroutines,
   Profilebar,
   RoutineActivities,
@@ -25,32 +23,12 @@ const Body = ({
   setRoutineName,
   routineGoal,
   setRoutineGoal,
+  isLoggedIn
 }) => {
   return (
     <div className="fullBody">
       <div>
-        <Profilebar />
-        {/* <Userroutines />
-        <Updateroutines /> */}
-
-        {/*      
-            <Createroutine
-              routineName={routineName}
-              setRoutineName={setRoutineName}
-              routineGoal={routineGoal}
-              setRoutineGoal={setRoutineGoal}
-              routines={routines}
-              setRoutines={setRoutines}
-            />
-        
-            <Createactivities
-              activities={activities}
-              setActivities={setActivities}
-              activityName={activityName}
-              setActivityName={setActivityName}
-              activityDescription={activityDescription}
-              setActivityDescription={setActivityDescription}
-            /> */}
+        <Profilebar isLoggedIn={isLoggedIn}/>
       </div>
       <Routes>
         <Route
@@ -85,14 +63,6 @@ const Body = ({
           element={<Routines routines={routines} setRoutines={setRoutines} />}
         />
       </Routes>
-      {/* <div className="bodyActivities">
-            <Activities activities={activities} setActivities={setActivities} />
-        
-        </div>
-        <div className="bodyRoutines">
-          <Routines routines={routines} setRoutines={setRoutines} />   
-         
-        </div> */}
     </div>
   );
 };

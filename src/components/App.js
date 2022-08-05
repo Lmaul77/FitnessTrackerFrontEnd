@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Route, Routes, Link } from "react-router-dom";
-import { Header, Footer, Body, Register, Login, Createactivities } from "./";
+import { Route, Routes } from "react-router-dom";
+import { Body, Footer, Header, Login, Register } from "./";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -27,6 +27,7 @@ const App = () => {
       </header>
       <body>
       <Body
+        isLoggedIn={isLoggedIn}
         activities={activities}
         setActivities={setActivities}
         routines={routines}

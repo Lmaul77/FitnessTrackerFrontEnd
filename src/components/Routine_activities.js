@@ -1,5 +1,4 @@
-import react, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 import { getRoutines } from "../api";
 const RoutineActivities = ({ routines, setRoutines }) => {
   useEffect(() => {
