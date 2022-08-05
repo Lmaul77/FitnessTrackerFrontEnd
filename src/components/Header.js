@@ -9,7 +9,7 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
 
   return (
     <header id="HomeHeader">
-      <h1>LM:GT</h1>
+      <h1>Fitness Tracker</h1>
       <h2 id="Hmessage">Welcome to YOUR Fitness Journey</h2>
       <form>
         {!isLoggedIn ? (
