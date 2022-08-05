@@ -1,28 +1,25 @@
-import React, { useState, useEffect } from "react";
-import { getRoutines, attachActivityToRoutine } from "../api";
-import { Updateroutine_activities } from "./";
+import React, { useState } from "react";
+import { attachActivityToRoutine } from "../api";
 
-const AttachRoutine = ({ activityList, routineId }) => {
-  const [privateRoutines, setPrivateRoutines] = useState([]);
-  const [activityId, setActivityId] = useState("");
+const AttachRoutine = ({ activityList, routineId, thisRoutine, setThisRoutine }) => {
+  const [activity, setActivity] = useState([]);
   const [count, setCount] = useState("");
   const [duration, setDuration] = useState("");
-  const [showAddForm, setShowAddForm] = useState(null);
-  const [showActivityForm, setShowActivityForm] = useState(null);
-  const [showUpdateForm, setShowUpdateForm] = useState(null);
-  
+  const [showAddForm, setShowAddForm] = useState(null);  
 
   async function handleSubmit(event) {
     event.preventDefault();
-    console.log(activityId, routineId, "INSIDE HANDLE SUBMIT");
-    await attachActivityToRoutine(activityId, count, duration, routineId);
+    const newRoutineActivity = await attachActivityToRoutine(activity[1], count, duration, routineId);
+    newRoutineActivity.name = activity[0]
+    newRoutineActivity.description = activity[2]
+    newRoutineActivity.routineActivityId = activity[3]
+    setThisRoutine({...thisRoutine, activities: [...thisRoutine.activities, newRoutineActivity] })
   }
   return (
     <div>
       {showAddForm == routineId ? (
         <>
           <form onSubmit={handleSubmit}>
-            <fieldset>
               <label htmlFor="select-activity">
                 Activities{" "}
                 <span className="activities-count">
@@ -30,25 +27,24 @@ const AttachRoutine = ({ activityList, routineId }) => {
                 </span>
               </label>
               <select
-                name="activities"
                 id="select-activity"
-                value={activityId}
                 onChange={(event) => {
-                  setActivityId(event.target.value);
+                  console.log(event.target.value.split(","))
+                  setActivity(event.target.value.split(","));
                 }}
               >
-                <option value="any">Any</option>
-                {activityList.map((activities, idx) => (
+                {activityList.map((activity, idx) => {
+                  console.log(activity, "HERE IS THE ACTIVITY")
+                  return(
                   <option
-                    key={`${idx}:${activities.name}`}
-                    value={activities.id}
+                    key={`${idx}:${activity.name}`}
+                    value={`${activity.name}, ${activity.id}, ${activity.description}, ${activity.routineActivityId}`}
                   >
-                    {activities.name}
-                    {activities.id}
+                    {activity.name}
                   </option>
-                ))}
+                  )}
+                )}
               </select>
-            </fieldset>
             <label>
               Count:
               <input

@@ -1,4 +1,3 @@
-import react, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createRoutine } from "../api";
 const Createroutine = ({
@@ -16,7 +15,7 @@ const Createroutine = ({
     const token = localStorage.getItem("token");
     const newRoutine = await createRoutine(token, routineName, routineGoal);
     setRoutines([newRoutine, ...routines]);
-    Navigate("/");
+    Navigate("/userRoutines");
   };
 
   return (

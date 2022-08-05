@@ -20,8 +20,8 @@ const Createactivities = ({
       activityName,
       activityDescription
     );
-    // setActivities([newActivity, ...activities]);
-    Navigate("/");
+    setActivities([newActivity, ...activities]);
+    Navigate("/userRoutines");
   }
 
   return (

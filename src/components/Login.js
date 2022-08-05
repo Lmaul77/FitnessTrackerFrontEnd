@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom/client";
+import { useNavigate } from "react-router-dom";
 import { loginUser } from "../api";
 
 const Login = ({ setIsLoggedIn }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate()
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -15,6 +16,7 @@ const Login = ({ setIsLoggedIn }) => {
     setIsLoggedIn(true)
     setUsername("");
     setPassword("");
+    navigate("/userRoutines")
   };
 
   return (
