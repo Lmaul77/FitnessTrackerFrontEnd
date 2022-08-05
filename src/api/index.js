@@ -204,3 +204,4 @@ export async function getRoutinesWithActivities(token, id) {
   const result = await response.json()
   return result
 }
+
