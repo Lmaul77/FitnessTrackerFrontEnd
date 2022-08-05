@@ -8,6 +8,7 @@ const Routines = ({routines,setRoutines})=>{
     useEffect(()=>{
         getRoutines().then((results)=>{
             setRoutines(results)
+            console.log(results,"SHOW ME ROUTINE ACTIVITY ID PLEASE IN ROUTINES LINE 11")
         })
     },[])
     const displayRoutines = routines.map((element,index)=>{

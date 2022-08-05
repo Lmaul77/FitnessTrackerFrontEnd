@@ -145,7 +145,7 @@ export async function attachActivityToRoutine(activityId, count, duration, routi
 }
 
 export async function updateRoutineActivities(token, id, count, duration) {
-  const response = await fetch(`${BASE_URL}/api/routine_activities/${id}`, {
+  const response = await fetch(`${BASE_URL}/routine_activities/${id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -157,6 +157,7 @@ export async function updateRoutineActivities(token, id, count, duration) {
     })
   })
   const result = await response.json()
+  console.log(result,"HOPEFULLY UPDATING API ROUTINE ACTIVITY")
   return result
 }
 
