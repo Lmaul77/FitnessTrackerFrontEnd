@@ -9,7 +9,7 @@ const Footer = () => {
           <p class="text-justify">
             FITNESS TRACKER. Hopefully this works and so do you.
           </p>
-          <h6>LINKS</h6>
+          <h6>COSMETIC LINKS: THEY DO NOT WORK</h6>
           <ul class="footer-links">
             <li>
               <a href="#">About Us</a>
@@ -34,8 +34,8 @@ const Footer = () => {
       <div class="container">
         <div class="row">
           <p class="copyright-text">
-            Copyright &copy; 2017 All Rights Reserved by
-            <a href="#">Scanfcode</a>.
+            Fake Copyright &copy; by
+            <a href="#">Lucas and Garrett</a>.
           </p>
 
           <ul class="social-icons">
