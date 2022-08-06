@@ -23,12 +23,13 @@ const Body = ({
   setRoutineName,
   routineGoal,
   setRoutineGoal,
-  isLoggedIn
+  isLoggedIn,
+  setIsLoggedIn
 }) => {
   return (
     <div className="fullBody">
       <div>
-        <Profilebar isLoggedIn={isLoggedIn}/>
+        <Profilebar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
       </div>
       <Routes>
         <Route

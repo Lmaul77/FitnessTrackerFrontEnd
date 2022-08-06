@@ -28,6 +28,7 @@ const App = () => {
       <body>
       <Body
         isLoggedIn={isLoggedIn}
+        setIsLoggedIn={setIsLoggedIn}
         activities={activities}
         setActivities={setActivities}
         routines={routines}
