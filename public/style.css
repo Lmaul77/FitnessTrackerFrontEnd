@@ -33,6 +33,7 @@ background-color: black;
 
   .fullBody {
     display: flex;
+    min-height: 768px;
     max-width: 100%;
     max-height: 100%;
     flex-grow: 100vw;
@@ -203,7 +204,7 @@ background-color: black;
         }
         
         .main-menu>ul {
-        margin:7px 0;
+        margin: 5px 0;
         }
         
         .main-menu li {
@@ -384,15 +385,15 @@ background-color: black;
   font-size:15px;
   line-height:24px;
   color:#737373;
+  display:flex;
+  justify-content: space-between;
+  
 }
-.site-footer hr
-{
-  border-top-color:#bbb;
-  opacity:0.5
-}
-.site-footer hr.small
-{
-  margin:20px 0
+.container{
+  display: inline-flex;
+  flex-wrap: wrap;
+  
+ 
 }
 .site-footer h6
 {
@@ -400,7 +401,11 @@ background-color: black;
   font-size:16px;
   text-transform:uppercase;
   margin-top:5px;
-  letter-spacing:2px
+  letter-spacing:2px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+
 }
 .site-footer a
 {

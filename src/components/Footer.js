@@ -12,21 +12,21 @@ const Footer = () => {
           <h6>LINKS</h6>
           <ul class="footer-links">
             <li>
-              <a href="http://scanfcode.com/about/">About Us</a>
+              <a href="#">About Us</a>
             </li>
             <li>
-              <a href="http://scanfcode.com/contact/">Contact Us</a>
+              <a href="#">Contact Us</a>
             </li>
             <li>
-              <a href="http://scanfcode.com/contribute-at-scanfcode/">
+              <a href="#">
                 Contribute
               </a>
             </li>
             <li>
-              <a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a>
+              <a href="#">Privacy Policy</a>
             </li>
             <li>
-              <a href="http://scanfcode.com/sitemap/">Sitemap</a>
+              <a href="#">Sitemap</a>
             </li>
           </ul>
         </div>
