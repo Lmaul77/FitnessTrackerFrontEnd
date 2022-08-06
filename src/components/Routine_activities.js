@@ -20,7 +20,7 @@ const RoutineActivities = ({ routines, setRoutines }) => {
             <div className="Routine_Activities_ACTIVITY">
               {routine.activities.map((activity, index) => (
                 <div key={`allRoutinesActs: ${activity.id}`}>
-                  <h4>Activity Name: {activity.name}</h4>
+                  <h4 className="SingleActivityName">Activity Name: {activity.name}</h4>
                   <ul>
                     <li>Description: {activity.description}</li>
                     <li>Count: {activity.count} </li>

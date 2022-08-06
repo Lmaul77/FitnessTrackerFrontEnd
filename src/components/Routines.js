@@ -13,7 +13,7 @@ const Routines = ({routines,setRoutines})=>{
     },[])
     const displayRoutines = routines.map((element,index)=>{
         return(
-            <div className = "allRoutines" key={`Routine ${index}`}>
+            <div className="SingleActivity" key={`Routine ${index}`}>
                 <div className="creatorRoutines">Creator: {element.creatorName}</div>
                 <div className = "nameAllRoutines">{element.name}</div>
                 <div className = "routineGoal"> Goal: {element.goal}</div>
@@ -24,11 +24,11 @@ const Routines = ({routines,setRoutines})=>{
         )
     })
     return(
-        <div>
+        <div className = "allRoutines">
             <div className="routinesHeader">
-                ROUTINES
+                ALL ROUTINES
             </div>
-            <div>
+            <div >
                 {displayRoutines}
             </div>
         </div>
