@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-const Profilebar = ({ isLoggedIn }) => {
+const Profilebar = ({ isLoggedIn, setIsLoggedIn }) => {
     function logOut() {
         setIsLoggedIn(false);
         localStorage.clear("token");
       }
   return (
     <nav >
-        <h1 className="Profilebar">Navigation</h1>
+        <h1 className="Profilebar"></h1>
       {isLoggedIn ? (
         <ul>
           <div class="area"></div>
@@ -66,10 +66,10 @@ const Profilebar = ({ isLoggedIn }) => {
 
             <ul class="logout">
               <li>
-                <a href="#">
+  
                   <i class="fa fa-power-off fa-2x"></i>
-                  <span class="nav-text">Logout</span>
-                </a>
+                  <span class="nav-text">   <button onClick={logOut}>LOG OUT!</button></span>
+    
               </li>
             </ul>
           </nav>

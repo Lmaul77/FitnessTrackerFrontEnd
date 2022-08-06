@@ -19,9 +19,9 @@ const Createroutine = ({
   };
 
   return (
-    <div id="NewRoutine">
+    <div id="addRoutine">
       <div>
-        <h1>Create a New Routine</h1>
+        <h1 className="createRoutineHeader">Create a New Routine</h1>
       </div>
       <form onSubmit={handleSubmit}>
         <div>

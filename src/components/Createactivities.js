@@ -29,7 +29,7 @@ const Createactivities = ({
       <div className="createActivityHeader">
         Add A New Activity
       </div>
-      <form onSubmit={handleSubmit}>
+      <form  onSubmit={handleSubmit}>
         <div>
           <input
             id="AddName"
