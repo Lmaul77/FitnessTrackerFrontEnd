@@ -7,17 +7,17 @@ const SingleRoutine = ({routine, activityList})=>{
     const [thisRoutine, setThisRoutine] = useState(routine)
     const {creatorId, name, goal, id, activities,creatorName} = thisRoutine
     return(
-        <>
-      <div className="allRoutines" key={`${id}`}>
-      <h2 className="nameAllRoutines">Name: {name}</h2>
+        <div className="RoutineActivitiesBody">
+      <div className="Routine_Activities_ROUTINE" key={`${id}`}>
+      <h2 className="SingleUserRoutine">Name: {name}</h2>
       <h3>Goal: {goal}</h3>
-      <h5 className="creatorRoutines">Creator: {creatorId} </h5> 
+      <h5 className="RoutineActivitiesCreator">Creator: {creatorId} </h5> 
        <AttachRoutine thisRoutine={thisRoutine} setThisRoutine={setThisRoutine} activityList={activityList} routineId={id}/>
          <Deleteroutine id={id}/> 
-      <div className="routine_activities">
+      <div className="Routine_Activities_ACTIVITY">
         { activities ? activities.map((activity, index) => (
           <div key={`allRoutinesActs: ${activity.id}`}>
-            <h4>Activity Name: {activity.name}</h4>
+            <h4 className="SingleActivityName">Activity Name: {activity.name}</h4>
             <ul>
               <li>Description: {activity.description}</li>
               <li>Count: {activity.count} </li>
@@ -29,7 +29,7 @@ const SingleRoutine = ({routine, activityList})=>{
         )): <div> send help</div>}
       </div>
     </div>
-    </>
+    </div>
     )
 }
 

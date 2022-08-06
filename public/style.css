@@ -383,6 +383,9 @@ background-color: black;
   font-size: 16px;
   text-decoration: underline;
 }
+.SingleUserRoutine{
+  background-color: #6b9ac4;
+}
 .SingleActivityName{
   display: flex;
   justify-content: center;
