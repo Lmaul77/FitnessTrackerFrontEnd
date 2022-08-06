@@ -4,6 +4,7 @@ import { AttachRoutine, Deleteactivity, Deleteroutine, UpdateRoutine_Activities 
 
 
 const SingleRoutine = ({routine, activityList, privateRoutines, setPrivateRoutines})=>{
+  
     const {creatorId, name, goal, id, activities,creatorName} = routine
     return(
         <div className="UserRoutineActivitiesBody">

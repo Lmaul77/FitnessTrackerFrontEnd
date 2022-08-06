@@ -22,7 +22,8 @@ const UserRoutines = ()=>{
         }
         getPageData()
 
-    },[privateRoutines])
+    }, [])
+
     return(
         <div>
             {privateRoutines.length ? privateRoutines.map((element, index)=>{
