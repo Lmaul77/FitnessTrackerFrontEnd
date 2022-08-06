@@ -20,15 +20,20 @@ const Login = ({ setIsLoggedIn }) => {
   };
 
   return (
-  
-    <form id="logIn" onSubmit={handleSubmit}>
+  <div id="LoginBoxCenter">
+    <div id="LoginBox">
+      <div>
+        <h1 id="LoginHeader">Log In To Your Fitness Tracker Account!</h1>
+      </div>
+    <form onSubmit={handleSubmit}>
       <div>
         <fieldset>
           <label>
-            User Name:   
             <input
+              id="HUsername"
               name="username"
               type="text"
+              placeholder="Username"
               value={username}
               onChange={(event) => {
                 setUsername(event.target.value);
@@ -39,10 +44,11 @@ const Login = ({ setIsLoggedIn }) => {
         </fieldset>
         <fieldset>
           <label>
-            Password: 
             <input
+              id="HPassword"
               name="password"
               type="text"
+              placeholder="Password"
               value={password}
               onChange={(event) => {
                 console.log(event.target.value);
@@ -52,8 +58,10 @@ const Login = ({ setIsLoggedIn }) => {
           </label>
         </fieldset>
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit" class="noselect" style={{marginTop: "5px", position: "relative", left: "85px"}}>Login</button>
     </form>
+    </div>
+    </div>
   );
 };
 

@@ -10,22 +10,19 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
   return (
     <header id="HomeHeader">
       <h1>Fitness Tracker</h1>
-      <h2 id="Hmessage">Welcome to YOUR Fitness Journey</h2>
       <form>
         {!isLoggedIn ? (
           <>
             <div>
-              <Link to="/login"> LOGIN </Link>
+              <button><Link to="/login" style={{textDecoration: "none", color: "white"}}> LOGIN </Link></button>
             </div>
+            <br/>
             <div>
-              <Link to="/Register"> REGISTER</Link>
+              <button><Link to="/Register" style={{textDecoration: "none", color: "white"}}> REGISTER</Link></button>
             </div>
           </>
         ) : (
           <>
-            <div>
-              <Link to="/Userroutines"> My Routines </Link>
-            </div>
             <div>
               <button onClick={logOut}>LOG OUT!</button>
             </div>

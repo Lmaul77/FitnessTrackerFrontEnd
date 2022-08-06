@@ -18,14 +18,22 @@ const Register = () => {
     };
   
     return (
+      <div id="RegisterBoxCenter">
+        <div id="RegisterBox">
+          <div>
+            <h1 id="RegisterMessage">
+              Create Your New Fitness Tracker Account
+            </h1>
+          </div>
       <form id="REGISTRATION" onSubmit={handleSubmit}>
         <div>
           <fieldset>
             <label>
-              Register New User
               <input
+                id="RUsername"
                 name="USERNAME"
                 type="text"
+                placeholder="Username"
                 value={username}
                 onChange={(event) => {
                   setUsername(event.target.value);
@@ -36,10 +44,11 @@ const Register = () => {
           </fieldset>
           <fieldset>
             <label>
-              Password
               <input
+                id="RPassword"
                 name="PASSWORD"
                 type="text"
+                placeholder="Password"
                 value={password}
                 onChange={(event) => {
                   console.log(event.target.value);
@@ -49,8 +58,10 @@ const Register = () => {
             </label>
           </fieldset>
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" class="noselect" style={{marginTop: "5px", position: "relative", left: "85px"}}>Submit</button>
       </form>
+      </div>
+      </div>
     );
   };
   export default Register;
