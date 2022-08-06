@@ -1,100 +1,119 @@
-import { Link } from 'react-router-dom';
-const Profilebar = ({isLoggedIn}) => {
-    return (
-        <nav className="Profilebar">
-            <h1>Navigation</h1>
-
-            {isLoggedIn ? (
-                
+import { Link } from "react-router-dom";
+const Profilebar = ({ isLoggedIn }) => {
+  return (
+    <nav >
+        <h1 className="Profilebar">Navigation</h1>
+      {isLoggedIn ? (
+        <ul>
+          <div class="area"></div>
+          <nav class="main-menu">
             <ul>
-            <li className="has-subnav">
-                    <a href="#">
-                    <i class="fa-solid fa-table-columns "></i>
-                        <span className="nav-text">
-                        <Link to="/allRoutines">All routines</Link>
-                        </span>
-                    </a>
-                    </li>
-                    <li className="has-subnav">
-                    <a href="#">
-                    <i class="fa-solid fa-heart-pulse"></i>
-                        <span className="nav-text">
-                        <Link to="/activities"> Activities </Link>
-                        </span>
-                    </a>   
-                </li>
-        
-                <li className="has-subnav">
-                    <a href="#">
-                    <i class="fa-solid fa-dumbbell"></i>
-                        <span className="nav-text">
-                        <Link to="/RoutineActivities">Routine Activities</Link>
-                        </span>
-                    </a>   
-                </li>
-                <li className="has-subnav">
-                    <a href="#">
-                    <i class="fa-solid fa-ranking-star"></i>
-                        <span className="nav-text">
-                        <Link to="/userRoutines">My Routines</Link>
-                        </span>
-                    </a>
-                    </li>
-                    <li className="has-subnav">
-                    <a href="#">
-                    <i class="fa-solid fa-person-walking"></i>
-                        <span className="nav-text">
-                        <Link to="/createActivities"> Create Activity </Link>
-                        </span>
-                    </a>   
-                </li>
-        
-                <li className="has-subnav">
-                    <a href="#">
-                    <i class="fa-solid fa-list-check"></i>
-                        <span className="nav-text">
-                        <Link to="/createRoutine"> Create Routine </Link>
-                        </span>
-                    </a>   
-                </li>
-        
-            </ul>
-            ) : (
-            
-                <ul>
-                <li className="has-subnav">
-                    <a href="#">
-                    <i class="fa-solid fa-table-columns"></i>
-                        <span className="nav-text">
-                        <Link to="/allRoutines">All routines</Link>
-                        </span>
-                    </a>
-                    </li>
-                    <li className="has-subnav">
-                    <a href="#">
-                    <i class="fa-solid fa-heart-pulse"></i>
-                        <span className="nav-text">
-                        <Link to="/activities"> Activities </Link>
-                        </span>
-                    </a>   
-                </li>
-        
-                <li className="has-subnav">
-                    <a href="#">
-                    <i class="fa-solid fa-dumbbell"></i>
-                        <span className="nav-text">
-                        <Link to="/RoutineActivities">Routine Activities</Link>
-                        </span>
-                    </a>   
-                </li>
+              <li>  
+                
+                <li class="has-subnav">
+                <a href="#">
+                <i class="fa-solid fa-house"></i>
+                  <span class="nav-text">
+                    <Link to="/userRoutines">My Routines</Link>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                <i class="fa-solid fa-dumbbell"></i>
+                  <span class="nav-text">
+                    <Link to="/createActivities"> Create Activity </Link>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                <i class="fa-solid fa-person-running"></i>
+                  <span class="nav-text">
+                    <Link to="/createRoutine"> Create Routine </Link>
+                  </span>
+                </a>
+              </li>
+                <a href="#">
+                <i class="fa-solid fa-list-check"></i>
+                <span class="nav-text">
+                  <Link to="/allRoutines">All routines</Link>
+                </span>
+              </a>
+            </li>
+            <li class="has-subnav">
+              <a href="#">
+              <i class="fa-solid fa-heart-pulse"></i>
+                <span class="nav-text">
+                  <Link to="/activities"> Activities </Link>
+                </span>
+              </a>
+            </li>
+            <li class="has-subnav">
+              <a href="#">
+              <i class="fa-solid fa-bars-progress"></i>
+              <span class="nav-text">
+                  <Link to="/RoutineActivities">Routine Activities</Link>
+                </span>
+              </a>
+            </li>
             
             </ul>
-            )
-            }
 
-           
-        </nav>
-    )
-}
+            <ul class="logout">
+              <li>
+                <a href="#">
+                  <i class="fa fa-power-off fa-2x"></i>
+                  <span class="nav-text">Logout</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <body></body>
+        </ul>
+      ) : (
+        <ul>
+          <div class="area"></div>
+          <nav class="main-menu">
+            <li>
+              <a href="#">
+              <i class="fa-solid fa-list-check"></i>
+                <span class="nav-text">
+                  <Link to="/allRoutines">All routines</Link>
+                </span>
+              </a>
+            </li>
+            <li class="has-subnav">
+              <a href="#">
+              <i class="fa-solid fa-heart-pulse"></i>
+                <span class="nav-text">
+                  <Link to="/activities"> Activities </Link>
+                </span>
+              </a>
+            </li>
+            <li class="has-subnav">
+              <a href="#">
+              <i class="fa-solid fa-bars-progress"></i>
+              <span class="nav-text">
+                  <Link to="/RoutineActivities">Routine Activities</Link>
+                </span>
+              </a>
+            </li>
 
-export default Profilebar
+            <ul class="logout">
+              <li>
+                <a href="#">
+                  <i class="fa fa-power-off fa-2x"></i>
+                  <span class="nav-text">Logout</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <body></body>
+        </ul>
+      )}
+    </nav>
+  );
+};
+
+export default Profilebar;
