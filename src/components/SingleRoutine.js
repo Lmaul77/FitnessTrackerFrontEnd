@@ -7,8 +7,8 @@ const SingleRoutine = ({routine, activityList})=>{
     const [thisRoutine, setThisRoutine] = useState(routine)
     const {creatorId, name, goal, id, activities,creatorName} = thisRoutine
     return(
-        <div className="RoutineActivitiesBody">
-      <div className="Routine_Activities_ROUTINE" key={`${id}`}>
+        <div className="UserRoutineActivitiesBody">
+      <div className="UserRoutine_Activities_ROUTINE" key={`${id}`}>
       <h2 className="SingleUserRoutine">Name: {name}</h2>
       <h3>Goal: {goal}</h3>
       <h5 className="RoutineActivitiesCreator">Creator: {creatorId} </h5> 

@@ -6,7 +6,7 @@ const Profilebar = ({ isLoggedIn, setIsLoggedIn }) => {
       }
   return (
     <nav >
-        <h1 className="Profilebar">Navigation</h1>
+        <h1 className="Profilebar"></h1>
       {isLoggedIn ? (
         <ul>
           <div class="area"></div>

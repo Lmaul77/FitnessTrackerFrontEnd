@@ -436,6 +436,20 @@ background-color: black;
   font-size: 14px;
   overflow: scroll
 }
+.UserRoutine_Activities_ROUTINE{
+  align-items: center;
+  font-size: 16px;
+  background-color: lightcyan;
+  box-shadow: 5px black;
+  width: relative;
+  border: 5px dashed plum;
+}
+.UserRoutineActivitiesBody{
+  box-sizing: border-box;
+  background-color: #6b9ac4;
+  box-shadow: 0 2px 4px 0 #6b9ac4;
+  overflow: scroll;
+}
 
 /* this is footer CSS */
 .site-footer

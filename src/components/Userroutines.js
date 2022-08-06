@@ -25,9 +25,9 @@ const UserRoutines = ()=>{
     },[])
     return(
         <div>
-            {privateRoutines.length ? privateRoutines.map((element)=>{
+            {privateRoutines.length ? privateRoutines.map((element, index)=>{
               return(
-              <SingleRoutine routine={element} activityList={activityList}/>
+              <SingleRoutine routine={element} activityList={activityList} key= {index}/>
               )
             }): <div>Loading Your Routines....</div>}
         </div>
