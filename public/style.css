@@ -312,25 +312,54 @@ background-color: black;
         height: 100%;
         }
 
-
+/* CREATE ROUTINE */
+#addRoutine {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  right: 500px;
+  top: 400px;
+  box-sizing: border-box;
+  background-color: lightcyan;
+  box-shadow: 0 2px 4px 0 #6b9ac4;
+  height: 300px;
+  width: 300px;
+  border: 5px dotted pink;
+}
+.createRoutineHeader {
+  display: flex;
+  flex-direction: column;
+  font-size: 26px;
+  text-decoration: underline;
+  text-align: center;
+  background-color: pink;
+}
 
   /* This is our createActivity.css */
 
   #addActivity {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
     right: 500px;
-    top: 200px;
+    top: 400px;
     box-sizing: border-box;
-    background-color: #4059ad;
+    background-color: lightcyan;
     box-shadow: 0 2px 4px 0 #6b9ac4;
-    height: 400px;
-    width: 500px;
+    height: 300px;
+    width: 300px;
+    border: 5px dotted pink;
   }
 
   .createActivityHeader {
+    display: flex;
+    flex-direction: column;
+    font-size: 26px;
+    text-decoration: underline;
     text-align: center;
-    background-color: black;
-    color: white;
+    background-color: pink;
   }
   
   /* This is our Attachactivitytoroutine.css */
@@ -555,3 +584,4 @@ background-color: black;
     font-weight:600
   }
 }
+ 
