@@ -9,9 +9,7 @@ const Login = ({ setIsLoggedIn }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("SUBMITTING LOGIN");
     const token = await loginUser (username, password);
-    console.log(token);
     localStorage.setItem("token", token);
     setIsLoggedIn(true)
     setUsername("");

@@ -1,16 +1,14 @@
 import React from "react";
 import { deleteActivityFromRoutine, deleteRoutine } from "../api";
-import { useNavigate } from "react-router-dom";
 
-const Deleteroutine = ({ routineActivityId }) => {
-  const navigate = useNavigate();
+const Deleteroutine = ({ routineActivityId, privateRoutines, setPrivateRoutines }) => {
 
   async function handleDelete(event) {
     event.preventDefault();
     const token = localStorage.getItem("token");
-    await deleteActivityFromRoutine(token, routineActivityId);
+    const deleteActivity = await deleteActivityFromRoutine(token, routineActivityId);
     console.log(routineActivityId, "HOPEFULLY DELETING THIS ROUTING BRO")
-    navigate("/userRoutines");
+    setPrivateRoutines(privateRoutines.filter(routine => routine !== deleteActivity))
   }
 
   return (

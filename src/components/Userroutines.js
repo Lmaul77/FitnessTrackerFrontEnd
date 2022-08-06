@@ -22,12 +22,12 @@ const UserRoutines = ()=>{
         }
         getPageData()
 
-    },[])
+    },[privateRoutines])
     return(
         <div>
             {privateRoutines.length ? privateRoutines.map((element, index)=>{
               return(
-              <SingleRoutine routine={element} activityList={activityList} key= {index}/>
+              <SingleRoutine routine={element} activityList={activityList} key= {index} privateRoutines={privateRoutines} setPrivateRoutines={setPrivateRoutines}/>
               )
             }): <div>Loading Your Routines....</div>}
         </div>

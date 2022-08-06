@@ -3,7 +3,7 @@ import {
   getUserRoutines, updateRoutineActivities
 } from "../api";
 // ITS TRYING TO PUSH ROUTINE ID WHEN I NEED ROUTINEACITIVITYID INSIDE ACTIVITIES ARRAY
-const UpdateRoutine_Activities = ({id, username, routineActivityId}) => {
+const UpdateRoutine_Activities = ({id, username, routineActivityId, privateRoutines, setPrivateRoutines}) => {
   const [updateDuration, setUpdateDuration] = useState("");
   const [updateCount, setUpdateCount] = useState("");
 
@@ -11,14 +11,13 @@ const UpdateRoutine_Activities = ({id, username, routineActivityId}) => {
     event.preventDefault();
     const token = localStorage.getItem("token");
     const myRoutines = await getUserRoutines(token, username )
-    await updateRoutineActivities(
+    const updatedRoutines = await updateRoutineActivities(
       token,
       routineActivityId,
       updateCount,
       updateDuration
     );
-    
-    console.log(id, routineActivityId, "UPDATING ROUTINE ACTIVITIES HOPEFULLY")
+    setPrivateRoutines(privateRoutines.filter(routine => routine !== updatedRoutines))
     }
 
   return (

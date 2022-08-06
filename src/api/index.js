@@ -16,7 +16,6 @@ export async function registerUser(registerUsername, registerPassword) {
 }
 
 export async function loginUser(Username, Password) {
-  console.log(Username, Password);
   const response = await fetch(`${BASE_URL}/users/login`, {
     method: "POST",
     headers: {
@@ -189,7 +188,6 @@ export async function getUserRoutines(token, username){
     }})
     
     const result = await response.json()
-    console.log(result, "API RESULTS GET USER")
     return result;
   } catch (error) {
     throw error;

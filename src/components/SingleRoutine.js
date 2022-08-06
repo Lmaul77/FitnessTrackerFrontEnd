@@ -3,17 +3,16 @@ import { AttachRoutine, Deleteactivity, Deleteroutine, UpdateRoutine_Activities 
 
 
 
-const SingleRoutine = ({routine, activityList})=>{
-    const [thisRoutine, setThisRoutine] = useState(routine)
-    const {creatorId, name, goal, id, activities,creatorName} = thisRoutine
+const SingleRoutine = ({routine, activityList, privateRoutines, setPrivateRoutines})=>{
+    const {creatorId, name, goal, id, activities,creatorName} = routine
     return(
         <div className="UserRoutineActivitiesBody">
       <div className="UserRoutine_Activities_ROUTINE" key={`${id}`}>
       <h2 className="SingleUserRoutine">Name: {name}</h2>
       <h3>Goal: {goal}</h3>
       <h5 className="RoutineActivitiesCreator">Creator: {creatorId} </h5> 
-       <AttachRoutine thisRoutine={thisRoutine} setThisRoutine={setThisRoutine} activityList={activityList} routineId={id}/>
-         <Deleteroutine id={id}/> 
+       <AttachRoutine activityList={activityList} routineId={id} privateRoutines={privateRoutines} setPrivateRoutines={setPrivateRoutines}/>
+         <Deleteroutine id={id} privateRoutines={privateRoutines} setPrivateRoutines={setPrivateRoutines}/> 
       <div className="Routine_Activities_ACTIVITY">
         { activities ? activities.map((activity, index) => (
           <div key={`allRoutinesActs: ${activity.id}`}>
@@ -23,8 +22,8 @@ const SingleRoutine = ({routine, activityList})=>{
               <li>Count: {activity.count} </li>
               <li>Duration: {activity.duration}</li>
             </ul>
-            <div><UpdateRoutine_Activities id={id} username={creatorName} routineActivityId={activity.routineActivityId}/></div>
-            <Deleteactivity routineActivityId={activity.routineActivityId} />
+            <div><UpdateRoutine_Activities id={id} username={creatorName} routineActivityId={activity.routineActivityId} privateRoutines={privateRoutines} setPrivateRoutines={setPrivateRoutines}/></div>
+            <Deleteactivity routineActivityId={activity.routineActivityId} privateRoutines={privateRoutines} setPrivateRoutines={setPrivateRoutines}/>
           </div>
         )): <div> send help</div>}
       </div>
