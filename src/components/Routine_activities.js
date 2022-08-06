@@ -8,6 +8,7 @@ const RoutineActivities = ({ routines, setRoutines }) => {
     });
   }, []);
   return (
+    
     <div className="RoutineActivitiesBody">
       <h1 className="RoutineActivitiesHeader">LIST OF AVAILABLE ROUTINES</h1>
       {routines.map((routine, index) => {
@@ -15,7 +16,7 @@ const RoutineActivities = ({ routines, setRoutines }) => {
           <div className="Routine_Activities_ROUTINE" key={`allRoutines: ${index}`}>
             <h2 className="RoutineActivitiesName">Name: {routine.name}</h2>
             <h3>Goal: {routine.goal}</h3>
-            <h5 className="RoutineActivitiesCreator">Creator: {routine.creatorName} </h5>
+            <h4 className="RoutineActivitiesCreator">Creator: {routine.creatorName} </h4>
             <div className="Routine_Activities_ACTIVITY">
               {routine.activities.map((activity, index) => (
                 <div key={`allRoutinesActs: ${activity.id}`}>
