@@ -7,6 +7,8 @@ import {
   Userroutines,
   Profilebar,
   RoutineActivities,
+  Login,
+  Register
 } from "./";
 import { Route, Routes } from "react-router-dom";
 
@@ -23,7 +25,8 @@ const Body = ({
   setRoutineName,
   routineGoal,
   setRoutineGoal,
-  isLoggedIn
+  isLoggedIn,
+  setIsLoggedIn
 }) => {
   return (
     <div className="fullBody">
@@ -50,6 +53,8 @@ const Body = ({
             />
           }
         />
+        <Route path="/register" element={<Register/>}/>
+        <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />}/>
         <Route path="/RoutineActivities" element={<RoutineActivities routines={routines} setRoutines={setRoutines}/>} />
         <Route path="/userRoutines" element={<Userroutines />} />
         <Route path="/createRoutine" element={<Createroutine  routineName={routineName}
