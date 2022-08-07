@@ -70,8 +70,8 @@ const AttachRoutine = ({ activityList, routineId, privateRoutines, setPrivateRou
                 }}
               />
             </label>
-            <button type="Submit">ATTACH</button>
-            <button
+            <button className="Testbutton" type="Submit">ATTACH</button>
+            <button className="Testbutton"
               onClick={() => {
                 setShowAddForm(null);
               }}
@@ -81,12 +81,12 @@ const AttachRoutine = ({ activityList, routineId, privateRoutines, setPrivateRou
           </form>
         </>
       ) : (
-        <button
+        <button className="Testbutton"
           onClick={() => {
             setShowAddForm(routineId);
           }}
         >
-          ADD ACTIVITY HERE
+          (+)ACTIVITY
         </button>
       )}
 

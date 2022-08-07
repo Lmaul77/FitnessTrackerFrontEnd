@@ -13,7 +13,7 @@ const Deleteroutine = ({ routineActivityId, privateRoutines, setPrivateRoutines 
 
   return (
     <form onSubmit={handleDelete}>
-      <button id="deleteButton" type="Submit">
+      <button className="Testbutton" id="deleteButton" type="Submit">
         DELETE
       </button>
     </form>

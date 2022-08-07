@@ -15,8 +15,8 @@ const Deleteroutine = ({id, privateRoutines, setPrivateRoutines}) => {
     
     return(
         <form onSubmit={handleDelete}>
-            <button id="deleteButton" type="Submit">
-                DELETE ROUTINE
+            <button className="Testbutton" id="deleteButton" type="Submit">
+                (-)ROUTINE
             </button>
         </form>
     )

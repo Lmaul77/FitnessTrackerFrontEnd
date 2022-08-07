@@ -41,7 +41,7 @@ const UpdateRoutine_Activities = ({id, username, routineActivityId, privateRouti
             setUpdateDuration(event.target.value);
           }}
         ></input>
-        <button type="submit">Update Count and Duration</button>
+        <button className="Testbutton" type="submit">Update Activity</button>
       </form>
     </div>
   );

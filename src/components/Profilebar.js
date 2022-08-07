@@ -68,7 +68,7 @@ const Profilebar = ({ isLoggedIn, setIsLoggedIn }) => {
               <li>
   
                   <i class="fa fa-power-off fa-2x"></i>
-                  <span class="nav-text">   <button onClick={logOut}>LOG OUT!</button></span>
+                  <span class="nav-text">   <button className="Testbutton" onClick={logOut}>LOG OUT!</button></span>
     
               </li>
             </ul>
