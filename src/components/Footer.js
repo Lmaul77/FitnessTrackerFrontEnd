@@ -18,9 +18,7 @@ const Footer = () => {
               <a href="#">Contact Us</a>
             </li>
             <li>
-              <a href="#">
-                Contribute
-              </a>
+              <a href="#">Contribute</a>
             </li>
             <li>
               <a href="#">Privacy Policy</a>
@@ -51,7 +49,7 @@ const Footer = () => {
             </li>
             <li>
               <a class="dribbble" href="#">
-              <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-instagram"></i>
               </a>
             </li>
             <li>

@@ -1,16 +1,28 @@
 import React, { useState } from "react";
 import { attachActivityToRoutine } from "../api";
 
-const AttachRoutine = ({ activityList, routineId, privateRoutines, setPrivateRoutines }) => {
+const AttachRoutine = ({
+  activityList,
+  routineId,
+  privateRoutines,
+  setPrivateRoutines,
+}) => {
   const [activity, setActivity] = useState([]);
   const [count, setCount] = useState("");
   const [duration, setDuration] = useState("");
-  const [showAddForm, setShowAddForm] = useState(null);  
+  const [showAddForm, setShowAddForm] = useState(null);
 
   async function handleSubmit(event) {
     event.preventDefault();
-    const newRoutineActivity = await attachActivityToRoutine(activity, count, duration, routineId);
-    setPrivateRoutines(privateRoutines.filter(routine => routine !== newRoutineActivity))
+    const newRoutineActivity = await attachActivityToRoutine(
+      activity,
+      count,
+      duration,
+      routineId
+    );
+    setPrivateRoutines(
+      privateRoutines.filter((routine) => routine !== newRoutineActivity)
+    );
   }
   return (
     <div>
@@ -67,8 +79,11 @@ const AttachRoutine = ({ activityList, routineId, privateRoutines, setPrivateRou
                 }}
               />
             </label>
-            <button className="Testbutton" type="Submit">ATTACH</button>
-            <button className="Testbutton"
+            <button className="Testbutton" type="Submit">
+              ATTACH
+            </button>
+            <button
+              className="Testbutton"
               onClick={() => {
                 setShowAddForm(null);
               }}
@@ -78,7 +93,8 @@ const AttachRoutine = ({ activityList, routineId, privateRoutines, setPrivateRou
           </form>
         </>
       ) : (
-        <button className="Testbutton"
+        <button
+          className="Testbutton"
           onClick={() => {
             setShowAddForm(routineId);
           }}
@@ -86,7 +102,6 @@ const AttachRoutine = ({ activityList, routineId, privateRoutines, setPrivateRou
           (+)ACTIVITY
         </button>
       )}
-
     </div>
   );
 };

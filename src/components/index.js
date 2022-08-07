@@ -8,13 +8,13 @@ export { default as Activities } from "./Activities";
 export { default as Routines } from "./Routines";
 export { default as Createactivities } from "./Createactivities";
 export { default as Createroutine } from "./Createroutine";
-export { default as Updateactivities } from "./Updateactivities"
-export { default as Updateroutines } from "./Updateroutines"
-export { default as Deleteroutine } from "./Deleteroutine"
-export { default as Userroutines } from "./Userroutines"
-export { default as Profilebar } from "./Profilebar"
-export { default as RoutineActivities } from "./Routine_activities"
-export {default as AttachRoutine} from "./Attachroutine"
-export {default as UpdateRoutine_Activities} from "./Updateroutine_activities"
-export { default as Deleteactivity } from "./Deleteactivity"
-export { default as SingleRoutine } from "./SingleRoutine"
+export { default as Updateactivities } from "./Updateactivities";
+export { default as Updateroutines } from "./Updateroutines";
+export { default as Deleteroutine } from "./Deleteroutine";
+export { default as Userroutines } from "./Userroutines";
+export { default as Profilebar } from "./Profilebar";
+export { default as RoutineActivities } from "./Routine_activities";
+export { default as AttachRoutine } from "./Attachroutine";
+export { default as UpdateRoutine_Activities } from "./Updateroutine_activities";
+export { default as Deleteactivity } from "./Deleteactivity";
+export { default as SingleRoutine } from "./SingleRoutine";

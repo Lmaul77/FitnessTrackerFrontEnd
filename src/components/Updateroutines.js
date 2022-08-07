@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { updateRoutine } from "../api";
 
-
-const Updateroutines = ({id}) => {
+const Updateroutines = ({ id }) => {
   const [routineName, setRoutineName] = useState("");
   const [routineGoal, setRoutineGoal] = useState("");
 

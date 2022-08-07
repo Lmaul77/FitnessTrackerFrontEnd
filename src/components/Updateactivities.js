@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { updateActivity } from "../api";
 
-const Updateactivities = ({id}) => {
+const Updateactivities = ({ id }) => {
   const [activityName, setActivityName] = useState("");
   const [activityDescription, setActivityDescription] = useState("");
 
@@ -9,7 +9,7 @@ const Updateactivities = ({id}) => {
     event.preventDefault();
     const token = localStorage.getItem("token");
     await updateActivity(token, activityName, activityDescription, id);
-    console.log(id, "UPDATING ACTIVITIES HOPEFULLY")
+    console.log(id, "UPDATING ACTIVITIES HOPEFULLY");
   }
 
   return (

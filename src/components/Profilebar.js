@@ -1,75 +1,76 @@
 import { Link } from "react-router-dom";
 const Profilebar = ({ isLoggedIn, setIsLoggedIn }) => {
-    function logOut() {
-        setIsLoggedIn(false);
-        localStorage.clear("token");
-      }
+  function logOut() {
+    setIsLoggedIn(false);
+    localStorage.clear("token");
+  }
   return (
-    <nav >
-        <h1 className="Profilebar"></h1>
+    <nav>
+      <h1 className="Profilebar"></h1>
       {isLoggedIn ? (
         <ul>
           <div class="area"></div>
           <nav class="main-menu">
             <ul>
-              <li>  
-                
+              <li>
                 <li class="has-subnav">
+                  <a href="#">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="nav-text">
+                      <Link to="/userRoutines">My Routines</Link>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-solid fa-dumbbell"></i>
+                    <span class="nav-text">
+                      <Link to="/createActivities"> Create Activity </Link>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-solid fa-person-running"></i>
+                    <span class="nav-text">
+                      <Link to="/createRoutine"> Create Routine </Link>
+                    </span>
+                  </a>
+                </li>
                 <a href="#">
-                <i class="fa-solid fa-house"></i>
+                  <i class="fa-solid fa-list-check"></i>
                   <span class="nav-text">
-                    <Link to="/userRoutines">My Routines</Link>
+                    <Link to="/allRoutines">All routines</Link>
                   </span>
                 </a>
               </li>
-              <li>
+              <li class="has-subnav">
                 <a href="#">
-                <i class="fa-solid fa-dumbbell"></i>
+                  <i class="fa-solid fa-heart-pulse"></i>
                   <span class="nav-text">
-                    <Link to="/createActivities"> Create Activity </Link>
+                    <Link to="/activities"> Activities </Link>
                   </span>
                 </a>
               </li>
-              <li>
+              <li class="has-subnav">
                 <a href="#">
-                <i class="fa-solid fa-person-running"></i>
+                  <i class="fa-solid fa-bars-progress"></i>
                   <span class="nav-text">
-                    <Link to="/createRoutine"> Create Routine </Link>
+                    <Link to="/RoutineActivities">Routine Activities</Link>
                   </span>
                 </a>
               </li>
-                <a href="#">
-                <i class="fa-solid fa-list-check"></i>
-                <span class="nav-text">
-                  <Link to="/allRoutines">All routines</Link>
-                </span>
-              </a>
-            </li>
-            <li class="has-subnav">
-              <a href="#">
-              <i class="fa-solid fa-heart-pulse"></i>
-                <span class="nav-text">
-                  <Link to="/activities"> Activities </Link>
-                </span>
-              </a>
-            </li>
-            <li class="has-subnav">
-              <a href="#">
-              <i class="fa-solid fa-bars-progress"></i>
-              <span class="nav-text">
-                  <Link to="/RoutineActivities">Routine Activities</Link>
-                </span>
-              </a>
-            </li>
-            
             </ul>
 
             <ul class="logout">
               <li>
-  
-                  <i class="fa fa-power-off fa-2x"></i>
-                  <span class="nav-text">   <button className="Testbutton" onClick={logOut}>LOG OUT!</button></span>
-    
+                <i class="fa fa-power-off fa-2x"></i>
+                <span class="nav-text">
+                  {" "}
+                  <button className="Testbutton" onClick={logOut}>
+                    LOG OUT!
+                  </button>
+                </span>
               </li>
             </ul>
           </nav>
@@ -81,7 +82,7 @@ const Profilebar = ({ isLoggedIn, setIsLoggedIn }) => {
           <nav class="main-menu">
             <li>
               <a href="#">
-              <i class="fa-solid fa-list-check"></i>
+                <i class="fa-solid fa-list-check"></i>
                 <span class="nav-text">
                   <Link to="/allRoutines">All routines</Link>
                 </span>
@@ -89,7 +90,7 @@ const Profilebar = ({ isLoggedIn, setIsLoggedIn }) => {
             </li>
             <li class="has-subnav">
               <a href="#">
-              <i class="fa-solid fa-heart-pulse"></i>
+                <i class="fa-solid fa-heart-pulse"></i>
                 <span class="nav-text">
                   <Link to="/activities"> Activities </Link>
                 </span>
@@ -97,13 +98,12 @@ const Profilebar = ({ isLoggedIn, setIsLoggedIn }) => {
             </li>
             <li class="has-subnav">
               <a href="#">
-              <i class="fa-solid fa-bars-progress"></i>
-              <span class="nav-text">
+                <i class="fa-solid fa-bars-progress"></i>
+                <span class="nav-text">
                   <Link to="/RoutineActivities">Routine Activities</Link>
                 </span>
               </a>
             </li>
-
           </nav>
           <body></body>
         </ul>

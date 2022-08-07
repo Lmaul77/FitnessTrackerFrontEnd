@@ -26,10 +26,8 @@ const Createactivities = ({
 
   return (
     <div id="addActivity">
-      <div className="createActivityHeader">
-        Add A New Activity
-      </div>
-      <form  onSubmit={handleSubmit}>
+      <div className="createActivityHeader">Add A New Activity</div>
+      <form onSubmit={handleSubmit}>
         <div>
           <input
             id="AddName"

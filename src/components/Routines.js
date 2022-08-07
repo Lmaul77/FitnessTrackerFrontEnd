@@ -1,15 +1,14 @@
 import React, { useEffect } from "react";
 import { getRoutines } from "../api";
-import { Updateroutines } from './';
-
-
 
 const Routines = ({routines,setRoutines})=>{
+    
     useEffect(()=>{
         getRoutines().then((results)=>{
             setRoutines(results)
         })
     },[])
+    
     const displayRoutines = routines.map((element,index)=>{
         return(
             <div className="SingleActivity" key={`Routine ${index}`}>

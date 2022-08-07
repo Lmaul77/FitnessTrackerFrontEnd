@@ -8,7 +8,7 @@ import {
   Profilebar,
   RoutineActivities,
   Login,
-  Register
+  Register,
 } from "./";
 import { Route, Routes } from "react-router-dom";
 
@@ -26,12 +26,12 @@ const Body = ({
   routineGoal,
   setRoutineGoal,
   isLoggedIn,
-  setIsLoggedIn
+  setIsLoggedIn,
 }) => {
   return (
     <div className="fullBody">
       <div>
-        <Profilebar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
+        <Profilebar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       </div>
       <Routes>
         <Route
@@ -53,16 +53,31 @@ const Body = ({
             />
           }
         />
-        <Route path="/register" element={<Register/>}/>
-        <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />}/>
-        <Route path="/RoutineActivities" element={<RoutineActivities routines={routines} setRoutines={setRoutines}/>} />
+        <Route path="/register" element={<Register />} />
+        <Route
+          path="/login"
+          element={<Login setIsLoggedIn={setIsLoggedIn} />}
+        />
+        <Route
+          path="/RoutineActivities"
+          element={
+            <RoutineActivities routines={routines} setRoutines={setRoutines} />
+          }
+        />
         <Route path="/userRoutines" element={<Userroutines />} />
-        <Route path="/createRoutine" element={<Createroutine  routineName={routineName}
+        <Route
+          path="/createRoutine"
+          element={
+            <Createroutine
+              routineName={routineName}
               setRoutineName={setRoutineName}
               routineGoal={routineGoal}
               setRoutineGoal={setRoutineGoal}
               routines={routines}
-              setRoutines={setRoutines} />} />
+              setRoutines={setRoutines}
+            />
+          }
+        />
         <Route
           path="/allRoutines"
           element={<Routines routines={routines} setRoutines={setRoutines} />}

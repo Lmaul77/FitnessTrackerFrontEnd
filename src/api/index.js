@@ -1,6 +1,7 @@
 const BASE_URL = "https://fitnesstrac-kr.herokuapp.com/api";
 
 export async function registerUser(registerUsername, registerPassword) {
+  try {
   const response = await fetch(`${BASE_URL}/users/register`, {
     method: "POST",
     headers: {
@@ -13,9 +14,13 @@ export async function registerUser(registerUsername, registerPassword) {
   });
   const result = await response.json();
   return result;
+} catch (error) {
+  next (error)
+}
 }
 
 export async function loginUser(Username, Password) {
+  try {
   const response = await fetch(`${BASE_URL}/users/login`, {
     method: "POST",
     headers: {
@@ -28,9 +33,13 @@ export async function loginUser(Username, Password) {
   });
   const result = await response.json();
   return result.token;
+} catch (error) {
+  next (error)
+}
 }
 
 export async function getActivities() {
+  try {
   const response = await fetch(`${BASE_URL}/activities`, {
     headers: {
       "Content-Type": "application/json",
@@ -38,9 +47,13 @@ export async function getActivities() {
   });
   const result = await response.json();
   return result;
+} catch (error) {
+  next (error)
+}
 }
 
 export async function getRoutines() {
+  try {
   const response = await fetch(`${BASE_URL}/routines`, {
     headers: {
       "Content-Type": "application/json",
@@ -48,9 +61,13 @@ export async function getRoutines() {
   });
   const result = await response.json();
   return result;
+} catch (error) {
+  next (error)
+}
 }
 
 export async function createActivities(token, activityName, activityDescription) {
+  try {
   const response = await fetch(`${BASE_URL}/activities`, {
     method: "POST",
     headers: {
@@ -64,9 +81,13 @@ export async function createActivities(token, activityName, activityDescription)
   });
   const result = await response.json();
   return result;
+} catch (error) {
+  next (error)
+}
 }
 
 export async function createRoutine(token, routineName, routineGoal) {
+  try {
   const response = await fetch(`${BASE_URL}/routines`, {
     method: "POST",
     headers: {
@@ -81,9 +102,13 @@ export async function createRoutine(token, routineName, routineGoal) {
   });
   const result = await response.json();
   return result;
+} catch (error) {
+  next (error)
+}
 }
 
 export async function updateActivity(token, activityName, activityDescription, id) {
+  try {
   const response = await fetch(`${BASE_URL}/activities/${id}`, {
     method: "PATCH",
     headers: {
@@ -97,9 +122,13 @@ export async function updateActivity(token, activityName, activityDescription, i
   })
   const result = await response.json()
   return result
+} catch (error) {
+  next (error)
+}
 }
 
 export async function updateRoutine(token, routineName, routineGoal, id) {
+  try {
   const response = await fetch(`${BASE_URL}/routines/${id}`, {
     method: "PATCH",
     headers: {
@@ -113,9 +142,13 @@ export async function updateRoutine(token, routineName, routineGoal, id) {
   })
   const result = await response.json()
   return result
+} catch (error) {
+  next (error)
+}
 }
 
 export async function deleteRoutine(token, id) {
+  try {
   const response = await fetch(`${BASE_URL}/routines/${id}`, {
     method: "DELETE",
     headers: {
@@ -125,11 +158,15 @@ export async function deleteRoutine(token, id) {
   })
   const result = await response.json()
     return result
+} catch (error) {
+  next (error)
+}
 }
 
 
 
 export async function attachActivityToRoutine(activityId, count, duration, routineId) {
+  try {
   const response = await fetch(`${BASE_URL}/routines/${routineId}/activities`, {
     headers: {
       'Content-Type': 'application/json'
@@ -143,9 +180,13 @@ export async function attachActivityToRoutine(activityId, count, duration, routi
   })
   const result = await response.json()
   return result
+} catch (error) {
+  next (error)
+}
 }
 
 export async function updateRoutineActivities(token, id, count, duration) {
+  try {
   const response = await fetch(`${BASE_URL}/routine_activities/${id}`, {
     method: "PATCH",
     headers: {
@@ -159,6 +200,9 @@ export async function updateRoutineActivities(token, id, count, duration) {
   })
   const result = await response.json()
   return result
+} catch (error) {
+  next (error)
+}
 }
 
 export async function getUser(token){
@@ -173,7 +217,7 @@ export async function getUser(token){
     const result = await response.json()
     return result;
   } catch (error) {
-    throw error;
+    next (error);
   }
 }
 
@@ -189,11 +233,12 @@ export async function getUserRoutines(token, username){
     const result = await response.json()
     return result;
   } catch (error) {
-    throw error;
+    next (error);
   }
 }
 
 export async function getRoutinesWithActivities(token, id) {
+  try {
   const response = await fetch(`${BASE_URL}/activities/${id}/routines`, {
     headers: {
       'Content-Type': 'application/json',
@@ -202,10 +247,14 @@ export async function getRoutinesWithActivities(token, id) {
   })
   const result = await response.json()
   return result
+} catch (error) {
+  next (error)
+}
 }
 
 
 export async function deleteActivityFromRoutine(token, id) {
+  try {
   const response = await fetch(`${BASE_URL}/routine_activities/${id}`, {
     method: "DELETE",
     headers: {
@@ -215,4 +264,7 @@ export async function deleteActivityFromRoutine(token, id) {
   })
   const result = await response.json()
   return result
+} catch (error) {
+  next (error)
+}
 }

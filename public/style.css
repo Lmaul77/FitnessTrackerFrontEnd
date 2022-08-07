@@ -2,10 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+
 html{
 background-color: black;
-
 }
+
   #HomeHeader{
     display: flex;
     flex-grow: 100vw;
@@ -19,11 +20,13 @@ background-color: black;
     text-decoration: none;
     background: url(https://www.dedicated-db.com/wp-content/uploads/images/thin-headers/thin-header-grey-bubbles.jpg)
   }
+  
   h1 {
     font-size: 20px;
     text-shadow: 1px 1px 3px darkgray;
     text-align: center;
   }
+  
   #Hmessage{
     font-size: 60px;
   }
@@ -158,9 +161,11 @@ background-color: black;
     width: 500px;
     overflow: scroll;
   }
-.SingleActivity{
+  
+  .SingleActivity{
   border: 1px solid black;
-}
+  }
+  
   .creatorRoutines {
     font-size: 30px;
     color: black;
@@ -191,13 +196,14 @@ background-color: black;
   }
 
   /* This is our Profilebar.css  */
-     .Profilebar{
+  .Profilebar{
       text-decoration: underline;
       width: 100px;
       height: relative;
       background-color: lightgray;
-     }
-        .fa-solid{
+  }
+  
+  .fa-solid{
         position: relative;
         display: table-cell;
         width: 60px;
@@ -206,15 +212,15 @@ background-color: black;
         vertical-align: middle;
         font-size: 30px;
         color: white;
-        }
+  }
         
         
-        .main-menu:hover,nav.main-menu.expanded {
+  .main-menu:hover,nav.main-menu.expanded {
         width:250px;
         overflow:visible;
-        }
+  }
         
-        .main-menu {
+  .main-menu {
         background: lightblue;
         border:1px solid black;
         height:500px;
@@ -224,19 +230,19 @@ background-color: black;
         transition:width .05s linear;
         -webkit-transform:translateZ(0) scale(1,1);
         z-index:1000;
-        }
+  }
         
-        .main-menu>ul {
+  .main-menu>ul {
         margin: 5px 0;
-        }
+  }
         
-        .main-menu li {
+  .main-menu li {
         position:relative;
         display:block;
         width:250px;
-        }
+  }
         
-        .main-menu li>a {
+  .main-menu li>a {
         position:relative;
         display:table;
         border-collapse:collapse;
@@ -249,9 +255,9 @@ background-color: black;
         -webkit-transition:all .1s linear;
         transition:all .1s linear;
           
-        }
+  }
         
-        .main-menu .nav-icon {
+  .main-menu .nav-icon {
         position:relative;
         display:table-cell;
         width:60px;
@@ -259,58 +265,60 @@ background-color: black;
         text-align:center;
         vertical-align:middle;
         font-size:18px;
-        }
+  }
         
-        .main-menu .nav-text {
+  .main-menu .nav-text {
         position:relative;
         display:table-cell;
         vertical-align:middle;
         width:190px;
           font-family: 'Titillium Web', sans-serif;
-        }
+  }
         
-        .main-menu>ul.logout {
+  .main-menu>ul.logout {
         position:absolute;
         left:0;
         bottom:0;
-        }
+  }
         
-        .no-touch .scrollable.hover {
+  .no-touch .scrollable.hover {
         overflow-y:hidden;
-        }
+  }
         
-        .no-touch .scrollable.hover:hover {
+  .no-touch .scrollable.hover:hover {
         overflow-y:auto;
         overflow:visible;
-        }
+  }
         
-        a:hover,a:focus {
+  a:hover,a:focus {
         text-decoration:none;
-        }
+  }
         
-        nav {
+  nav {
         -webkit-user-select:none;
         -moz-user-select:none;
         -ms-user-select:none;
         -o-user-select:none;
         user-select:none;
-        }
+  }
         
-        nav ul,nav li {
+  nav ul,nav li {
         outline:0;
         margin:0;
         padding:0;
-        }
-        .main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
+  }
+        
+  .main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
         color:#fff;
         background-color:#5fa2db;
-        }
-        .area {
+  }
+        
+  .area {
         float: left;
         background: #e2e2e2;
         width: 100%;
         height: 100%;
-        }
+  }
 
 /* CREATE ROUTINE */
 #addRoutine {
@@ -327,6 +335,7 @@ background-color: black;
   width: 300px;
   border: 5px dotted pink;
 }
+
 .createRoutineHeader {
   display: flex;
   flex-direction: column;
@@ -338,7 +347,7 @@ background-color: black;
 
   /* This is our createActivity.css */
 
-  #addActivity {
+#addActivity {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -351,20 +360,20 @@ background-color: black;
     height: 300px;
     width: 300px;
     border: 5px dotted pink;
-  }
+}
 
-  .createActivityHeader {
+.createActivityHeader {
     display: flex;
     flex-direction: column;
     font-size: 26px;
     text-decoration: underline;
     text-align: center;
     background-color: pink;
-  }
+}
   
   /* This is our Attachactivitytoroutine.css */
 
-  #attachRoutinesBox {
+#attachRoutinesBox {
     position: relative;
     right: 400px;
     top: 150px;
@@ -374,11 +383,11 @@ background-color: black;
     height: 500px;
     width: 700px;
     overflow: scroll;
-  }
+}
 
   /* This is our Userroutines.css */
 
-  .userRoutines {
+.userRoutines {
     position: relative;
     right: 400px;
     top: 150px;
@@ -388,16 +397,18 @@ background-color: black;
     height: 500px;
     width: 700px;
     overflow: scroll;
-  }
+}
   
-  .singleRoutines {
+.singleRoutines {
     background-color: white;
     border: 2px solid black;
-  }
+}
+
 .RoutineActivitiesCreator{
   background-color: lightblue;
 
 }
+
 .RoutineActivitiesBody{
     position: absolute;
     right: 500px;
@@ -409,21 +420,25 @@ background-color: black;
     width: 500px;
     overflow: scroll;
 }
+
 .RoutineActivitiesHeader{
   justify-content: space-between;
   align-items: center;
   font-size: 16px;
   text-decoration: underline;
 }
+
 .SingleUserRoutine{
   background-color: #6b9ac4;
 }
+
 .SingleActivityName{
   display: flex;
   justify-content: center;
   font-size: 20px;
   background-color: #46ceff;
 }
+
 .testing{
   align-items: center;
   font-size: 16px;
@@ -432,12 +447,14 @@ background-color: black;
   width: relative;
   border: 5px dashed plum;
 }
+
 .Routine_Activities_ROUTINE{
   align-items: center;
   font-size: 16px;
   background-color: lightcyan;
   box-shadow: 5px black;
 }
+
 .Routine_Activities_ACTIVITY{
   background-color: lightcyan;
   width: relative;
@@ -445,6 +462,7 @@ background-color: black;
   font-size: 14px;
   overflow: scroll
 }
+
 .UserRoutine_Activities_ROUTINE{
   align-items: center;
   font-size: 16px;
@@ -468,25 +486,22 @@ background-color: black;
 }
 
 /* this is footer CSS */
-.site-footer
-{
+.site-footer {
   background-color:#26272b;
   padding:45px 0 20px;
   font-size:15px;
   line-height:24px;
   color:#737373;
   display:flex;
-  justify-content: space-between;
-  
+  justify-content: space-between;  
 }
+
 .container{
   display: inline-flex;
-  flex-wrap: wrap;
-  
- 
+  flex-wrap: wrap; 
 }
-.site-footer h6
-{
+
+.site-footer h6 {
   color:#fff;
   font-size:16px;
   text-transform:uppercase;
@@ -494,43 +509,43 @@ background-color: black;
   letter-spacing:2px;
 
 }
-.site-footer a
-{
+
+.site-footer a {
   color:#737373;
 }
-.site-footer a:hover
-{
+
+.site-footer a:hover {
   color:#3366cc;
   text-decoration:none;
 }
-.footer-links
-{
+
+.footer-links {
   padding-left:0;
   list-style:none
 }
-.footer-links li
-{
+
+.footer-links li {
   display:block
 }
-.footer-links a
-{
+
+.footer-links a {
   color:#737373
 }
-.footer-links a:active,.footer-links a:focus,.footer-links a:hover
-{
+
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover {
   color:#3366cc;
   text-decoration:none;
 }
-.footer-links.inline li
-{
+
+.footer-links.inline li {
   display:inline-block
 }
-.site-footer .social-icons
-{
+
+.site-footer .social-icons {
   text-align:right
 }
-.site-footer .social-icons a
-{
+
+.site-footer .social-icons a {
   width:40px;
   height:40px;
   line-height:40px;
@@ -539,29 +554,30 @@ background-color: black;
   border-radius:100%;
   background-color:#33353d
 }
-.copyright-text
-{
+
+.copyright-text {
   margin:0
 }
-.social-icons
-{
+
+.social-icons {
   padding-left:0;
   margin-bottom:0;
   list-style:none
 }
-.social-icons li
-{
+
+.social-icons li {
   display:inline-block;
   margin-bottom:4px
 }
-.social-icons li.title
-{
+
+.social-icons li.title {
   margin-right:15px;
   text-transform:uppercase;
   color:#96a2b2;
   font-weight:700;
   font-size:13px
 }
+
 .social-icons a{
   background-color:#eceeef;
   color:#818a91;
@@ -577,36 +593,36 @@ background-color: black;
   -o-transition:all .2s linear;
   transition:all .2s linear
 }
-.social-icons a:active,.social-icons a:focus,.social-icons a:hover
-{
+
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover {
   color:#fff;
   background-color:#29aafe
 }
-.social-icons.size-sm a
-{
+
+.social-icons.size-sm a {
   line-height:34px;
   height:34px;
   width:34px;
   font-size:14px
 }
-.social-icons a.facebook:hover
-{
+
+.social-icons a.facebook:hover {
   background-color:#3b5998
 }
-.social-icons a.twitter:hover
-{
+
+.social-icons a.twitter:hover {
   background-color:#00aced
 }
-.social-icons a.linkedin:hover
-{
+
+.social-icons a.linkedin:hover {
   background-color:#007bb6
 }
-.social-icons a.dribbble:hover
-{
+
+.social-icons a.dribbble:hover {
   background-color:#ea4c89
 }
-@media (max-width:767px)
-{
+
+@media (max-width:767px) {
   .social-icons li.title
   {
     display:block;
@@ -738,6 +754,7 @@ button {
   font-size: 20px;
   color: white;
 }
+
 .Testbutton {
 	width: 75px;
 	height: 30px;
@@ -748,6 +765,7 @@ button {
   font-size: 12px;
   color: white;
 }
+
 .Testbutton:before {
 	color: rgba(255,255,255,0.5);
 	font-size: 12px;

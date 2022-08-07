@@ -14,11 +14,27 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
         {!isLoggedIn ? (
           <>
             <div>
-              <button><Link to="/login" style={{textDecoration: "none", color: "white"}}> LOGIN </Link></button>
+              <button>
+                <Link
+                  to="/login"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  {" "}
+                  LOGIN{" "}
+                </Link>
+              </button>
             </div>
-            <br/>
+            <br />
             <div>
-              <button><Link to="/Register" style={{textDecoration: "none", color: "white"}}> REGISTER</Link></button>
+              <button>
+                <Link
+                  to="/Register"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  {" "}
+                  REGISTER
+                </Link>
+              </button>
             </div>
           </>
         ) : (

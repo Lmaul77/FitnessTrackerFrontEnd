@@ -1,24 +1,26 @@
 import { useState } from "react";
-import {
-  getUserRoutines, updateRoutineActivities
-} from "../api";
-// ITS TRYING TO PUSH ROUTINE ID WHEN I NEED ROUTINEACITIVITYID INSIDE ACTIVITIES ARRAY
-const UpdateRoutine_Activities = ({id, username, routineActivityId, privateRoutines, setPrivateRoutines}) => {
+import { updateRoutineActivities } from "../api";
+const UpdateRoutine_Activities = ({
+  routineActivityId,
+  privateRoutines,
+  setPrivateRoutines,
+}) => {
   const [updateDuration, setUpdateDuration] = useState("");
   const [updateCount, setUpdateCount] = useState("");
 
-  async function handleUpdatingRoutineActivities(event){
+  async function handleUpdatingRoutineActivities(event) {
     event.preventDefault();
     const token = localStorage.getItem("token");
-    const myRoutines = await getUserRoutines(token, username )
     const updatedRoutines = await updateRoutineActivities(
       token,
       routineActivityId,
       updateCount,
       updateDuration
     );
-    setPrivateRoutines(privateRoutines.filter(routine => routine !== updatedRoutines))
-    }
+    setPrivateRoutines(
+      privateRoutines.filter((routine) => routine !== updatedRoutines)
+    );
+  }
 
   return (
     <div>
@@ -41,7 +43,9 @@ const UpdateRoutine_Activities = ({id, username, routineActivityId, privateRouti
             setUpdateDuration(event.target.value);
           }}
         ></input>
-        <button className="Testbutton" type="submit">Update Activity</button>
+        <button className="Testbutton" type="submit">
+          Update Activity
+        </button>
       </form>
     </div>
   );
