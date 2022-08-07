@@ -10,7 +10,6 @@ const Deleteroutine = ({id, privateRoutines, setPrivateRoutines}) => {
         const token = localStorage.getItem("token")
         const freshRoutine = await deleteRoutine(token, id)
         setPrivateRoutines(privateRoutines.filter(routine => routine !== freshRoutine))
-        console.log(id, "HOPEFULLY DELETING THIS ROUTING BRO")
     }
     
     return(

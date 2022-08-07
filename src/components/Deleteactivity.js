@@ -7,7 +7,6 @@ const Deleteroutine = ({ routineActivityId, privateRoutines, setPrivateRoutines 
     event.preventDefault();
     const token = localStorage.getItem("token");
     const deleteActivity = await deleteActivityFromRoutine(token, routineActivityId);
-    console.log(routineActivityId, "HOPEFULLY DELETING THIS ROUTING BRO")
     setPrivateRoutines(privateRoutines.filter(routine => routine !== deleteActivity))
   }
 

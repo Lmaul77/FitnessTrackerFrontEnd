@@ -9,7 +9,6 @@ const AttachRoutine = ({ activityList, routineId, privateRoutines, setPrivateRou
 
   async function handleSubmit(event) {
     event.preventDefault();
-    console.log(activity, "THIS IS THE ACTIVITY")
     const newRoutineActivity = await attachActivityToRoutine(activity, count, duration, routineId);
     setPrivateRoutines(privateRoutines.filter(routine => routine !== newRoutineActivity))
   }
@@ -53,7 +52,6 @@ const AttachRoutine = ({ activityList, routineId, privateRoutines, setPrivateRou
                 value={count}
                 onChange={(event) => {
                   setCount(event.target.value);
-                  console.log(count, "Line 44");
                 }}
               />
             </label>
@@ -66,7 +64,6 @@ const AttachRoutine = ({ activityList, routineId, privateRoutines, setPrivateRou
                 value={duration}
                 onChange={(event) => {
                   setDuration(event.target.value);
-                  console.log(duration, "Line 56");
                 }}
               />
             </label>

@@ -4,7 +4,6 @@ const RoutineActivities = ({ routines, setRoutines }) => {
   useEffect(() => {
     getRoutines().then((results) => {
       setRoutines(results);
-      console.log(results, "show me line 9");
     });
   }, []);
   return (
