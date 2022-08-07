@@ -10,13 +10,12 @@ const Deleteroutine = ({id, privateRoutines, setPrivateRoutines}) => {
         const token = localStorage.getItem("token")
         const freshRoutine = await deleteRoutine(token, id)
         setPrivateRoutines(privateRoutines.filter(routine => routine !== freshRoutine))
-        console.log(id, "HOPEFULLY DELETING THIS ROUTING BRO")
     }
     
     return(
         <form onSubmit={handleDelete}>
-            <button id="deleteButton" type="Submit">
-                DELETE ROUTINE
+            <button className="Testbutton" id="deleteButton" type="Submit">
+                (-)ROUTINE
             </button>
         </form>
     )

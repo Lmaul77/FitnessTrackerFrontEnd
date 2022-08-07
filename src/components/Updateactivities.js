@@ -38,7 +38,7 @@ const Updateactivities = ({id}) => {
             }}
           />
         </div>
-        <button id="updateActivityButton" type="Submit">
+        <button className="Testbutton" id="updateActivityButton" type="Submit">
           SAVE
         </button>
       </form>

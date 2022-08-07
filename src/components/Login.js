@@ -35,7 +35,6 @@ const Login = ({ setIsLoggedIn }) => {
               value={username}
               onChange={(event) => {
                 setUsername(event.target.value);
-                console.log(username);
               }}
             />
           </label>
@@ -49,7 +48,6 @@ const Login = ({ setIsLoggedIn }) => {
               placeholder="Password"
               value={password}
               onChange={(event) => {
-                console.log(event.target.value);
                 setPassword(event.target.value);
               }}
             />

@@ -158,7 +158,6 @@ export async function updateRoutineActivities(token, id, count, duration) {
     })
   })
   const result = await response.json()
-  console.log(result,"HOPEFULLY UPDATING API ROUTINE ACTIVITY")
   return result
 }
 

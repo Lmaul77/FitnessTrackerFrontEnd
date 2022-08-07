@@ -9,9 +9,7 @@ const Register = () => {
   
     const handleSubmit = async (event) => {
       event.preventDefault();
-      console.log("SUBMITTING REGISTRATION");
       const token = await registerUser(username, password);
-      console.log(token);
       localStorage.setItem("token", token);
       setUsername("");
       setPassword("");
