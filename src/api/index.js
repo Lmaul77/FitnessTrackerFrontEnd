@@ -1,4 +1,4 @@
-const BASE_URL = "http://fitnesstrac-kr.herokuapp.com/api";
+const BASE_URL = "https://fitnesstrac-kr.herokuapp.com/api";
 
 export async function registerUser(registerUsername, registerPassword) {
   const response = await fetch(`${BASE_URL}/users/register`, {

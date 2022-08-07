@@ -17,7 +17,7 @@ const Routines = ({routines,setRoutines})=>{
                 <div className = "nameAllRoutines">{element.name}</div>
                 <div className = "routineGoal"> Goal: {element.goal}</div>
                 <div className="routineIsPublic">{element.IsPublic}</div>
-                <div className="updateAllRoutines"><Updateroutines id={element.id}/></div>
+                {/* <div className="updateAllRoutines"><Updateroutines id={element.id}/></div> */}
             </div>
 
         )

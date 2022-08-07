@@ -34,7 +34,7 @@ background-color: black;
 
   .fullBody {
     display: flex;
-    min-height: 768px;
+    min-height: 1000px;
     max-width: 100%;
     max-height: 100%;
     flex-grow: 100vw;
